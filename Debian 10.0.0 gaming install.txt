@@ -85,10 +85,17 @@ Go to activities menu and type NVIDIA it should give you a GUI.
 
 * sudo apt install ffmpeg
 * sudo apt install obs-studio
+* sudo apt-get install smplayer 
+* sudo apt-get install libnvidia-encode1 
+* sudo apt-get install simplescreenrecorder 
 
 Alternative:
 
 * sudo snap install obs-studio
+* sudo apt-get install smplayer 
+* sudo apt-get install libnvidia-encode1 
+* sudo apt-get install simplescreenrecorder 
+
 
 13) Optional install shotcut for video/photo editing:
 
