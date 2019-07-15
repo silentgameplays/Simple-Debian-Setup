@@ -1,10 +1,10 @@
-Making Debian Stretch 9.9.0 suitable for gaming, streaming and video editing distro
+Making Debian Buster 10.0.0 suitable for gaming, streaming and video editing distro
 
  1) Use this image https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/
  2) Use Rufus or whatever software you like to burn the usb stick
  3) Boot from the image
  4) Select Graphical Installer
- 5) Install Debian Stretch 9.9.0 on the desired partition. Make sure to be connected to the internet via cable, as there can be some firmware issues with Wi-Fi drivers!
+ 5) Install Debian Buster 10.0.0 on the desired partition. Make sure to be connected to the internet via cable, as there can be some firmware issues with Wi-Fi drivers!
  6) Once the installation is complete login using Gnome interface.
 Remember to go into Software and Updates GUI and check the following options : 
 * Officially supported (main)
@@ -17,9 +17,10 @@ Go to Terminal and input:
 
 7) Open terminal in activities and add your user, for example test to sudoers file and use the following commands:
 
-* Su 
-* adduser test
-* usermod -aG sudo test
+* su 
+* gpedit gedit /etc/sudoers
+# User privilege specification
+test
 
 Testing if everything works
 
@@ -33,12 +34,13 @@ Run the following command:
 Answer should be: 
 * root
 
-NB! If you donít have the sudo option install sudo under Su:
-* Su
+NB! If you don‚Äôt have the sudo option install sudo under Su:
+* su
 * apt install sudo
-* adduser test
-* usermod -aG sudo test
-
+* su 
+* gpedit gedit /etc/sudoers
+# User privilege specification
+test
 Switch back to test: 
 * su  test
 
@@ -48,7 +50,7 @@ Run the following command:
 Answer should be:
 * root
 
-8) Installing Multiarch very important! (youíll need it for NVIDIA drivers, steam and other stuff)
+8) Installing Multiarch very important! (you‚Äôll need it for NVIDIA drivers, steam and other stuff)
 * sudo dpkg --add-architecture i386
 * sudo apt-get update
 * sudo apt-get upgrade 
@@ -90,12 +92,12 @@ Alternative:
 
 13) Optional install shotcut for video/photo editing:
 
-* snap install shotcut ñclassic
+* snap install shotcut ‚Äìclassic
 
 14) Optional adding and mounting a disk to Debian 9.9.0
  Make sure to format the desired disk in the GUI Disks section to Ext4:
 
-Then name the disk like îdisk1î and go to Terminal and use the following commands:
+Then name the disk like ‚Äùdisk1‚Äù and go to Terminal and use the following commands:
 * sudo gedit /etc/fstab 
 
 Input the following line at the bottom of the file:
@@ -105,7 +107,7 @@ Save and run the following commands:
 * sudo mount /dev/sdc/ disk1
 * sudo apt-get update
 
-Ok, thank you, happy gaming and streaming on Debian Stretch 9.9.0.
+Ok, thank you, happy gaming and streaming on Debian Stretch 10.0.0.
 Hopefully same settings will work on the future Debian distros!
 Enjoy!
 #gimalaji_blake
