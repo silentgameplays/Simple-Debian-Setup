@@ -18,7 +18,7 @@ Go to Terminal and input:
 * gedit /etc/sudoers
 #User privilege specification
 test
-Testing if everything works
+* Testing if everything works
 Switch back to test using this command: 
 * su  test
 Run the following command: 
@@ -32,7 +32,7 @@ NB! If you don’t have the sudo option install sudo under Su:
 * gedit /etc/sudoers
 #User privilege specification
 test
-Switch back to test: 
+* Switch back to test: 
 * su  test
 Run the following command: 
 * sudo whoami
