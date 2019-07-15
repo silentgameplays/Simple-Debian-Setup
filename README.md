@@ -16,7 +16,7 @@ Go to Terminal and input:
 7) Open terminal in activities and add your user, for example test to sudoers file and use the following commands:
 * su 
 * gpedit gedit /etc/sudoers
-# User privilege specification
+#User privilege specification
 test
 Testing if everything works
 Switch back to test using this command: 
@@ -30,7 +30,7 @@ NB! If you don’t have the sudo option install sudo under Su:
 * apt install sudo
 * su 
 * gpedit gedit /etc/sudoers
-# User privilege specification
+#User privilege specification
 test
 Switch back to test: 
 * su  test
