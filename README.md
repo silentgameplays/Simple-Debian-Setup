@@ -88,7 +88,7 @@ Alternative:
 
 * snap install shotcut –classic
 
-14) Optional adding and mounting a disk to Debian 9.9.0
+14) Optional adding and mounting a disk to Debian 10.0.0
  Make sure to format the desired disk in the GUI Disks section to Ext4:
 
 Then name the disk like ”disk1” and go to Terminal and use the following commands:
