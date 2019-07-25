@@ -101,7 +101,7 @@ Save and run the following commands:
 * sudo mount /dev/sdc/ disk1
 * sudo apt-get update
 
-Ok, thank you, happy gaming and streaming on Debian Stretch 10.0.0.
+Ok, thank you, happy gaming and streaming on Debian Buster 10.0.0.
 Hopefully same settings will work on the future Debian distros!
 Enjoy!
 #gimalaji_blake
