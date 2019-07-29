@@ -86,7 +86,7 @@ Alternative:
 
 13) Optional install shotcut for video/photo editing:
 
-* snap install shotcut --classic
+* sudo snap install shotcut --classic
 
 14) Optional adding and mounting a disk to Debian 10.0.0
  Make sure to format the desired disk in the GUI Disks section to Ext4:
