@@ -1,10 +1,10 @@
-Making Debian Buster 10.0.0 suitable for gaming, streaming and video editing distro
+Making Debian Buster 10.1.0 suitable for gaming, streaming and video editing distro
 
  1) Use this image https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/
  2) Use Rufus or whatever software you like to burn the usb stick
  3) Boot from the image
  4) Select Graphical Installer
- 5) Install Debian Buster 10.0.0 on the desired partition. Make sure to be connected to the internet via cable, as there can be some firmware issues with Wi-Fi drivers!
+ 5) Install Debian Buster 10.1.0 on the desired partition. Make sure to be connected to the internet via cable, as there can be some firmware issues with Wi-Fi drivers!
  6) Once the installation is complete login using Gnome interface.
 Remember to go into Software and Updates GUI and check the following options : 
 * Officially supported (main)
@@ -101,7 +101,7 @@ Save and run the following commands:
 * sudo mount /dev/sdc/ disk1
 * sudo apt-get update
 
-Ok, thank you, happy gaming and streaming on Debian Buster 10.0.0.
+Ok, thank you, happy gaming and streaming on Debian Buster 10.1.0.
 Hopefully same settings will work on the future Debian distros!
 Enjoy!
 #gimalaji_blake
