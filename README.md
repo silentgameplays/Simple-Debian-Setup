@@ -63,7 +63,7 @@ Go to activities menu and type NVIDIA it should give you a GUI.
 
 10) Install Steam with the following commands, if you did all the steps before correctly Steam should install without issues:
 * sudo apt install steam
-
+NB!for testing distros apt-get install libgl1-nvidia-glvnd-glx:i386
 11) Optional for media playback and vlc install snap:
 * sudo apt-get update
 * sudo apt install snapd
