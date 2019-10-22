@@ -1,0 +1,5 @@
+For those having trouble launching Victor Vran on Debian Buster and Bullseye(Testing)
+
+In Steam right click and in Launch options set the following:
+
+OPENSSL_CONF=/etc/ssl/ %command%
