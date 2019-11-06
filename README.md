@@ -2,7 +2,7 @@ Making Debian Buster 10.1.0 suitable for gaming, streaming and video editing dis
 
  1) Use one of these images https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/
  https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/10.1.0-live+nonfree/amd64/iso-hybrid/
- 2) Use Rufus or whatever software you like to burn the usb stick
+ 2) Use Rufus(http://rufus.ie/) or whatever software you like to burn the usb stick
  3) Boot from the image
  4) Select Graphical Installer
  5) Install Debian Buster 10.1.0 on the desired partition. Make sure to be connected to the internet via cable, as there can be some firmware issues with Wi-Fi drivers!
@@ -14,7 +14,9 @@ Remember to go into Software and Updates GUI and check the following options :
 Add security updates later in the updates section via GUI after finishing all these steps:
 Go to Terminal and input: 
 * sudo apt-get update
-7) Open terminal in activities and add your user, for example test to sudoers file and use the following commands:
+* sudo apt-get upgrade
+7) Optional,if you typed your password during installation twice as Root and as User:
+Open terminal in activities and add your user, for example test to sudoers file and use the following commands:
 * su 
 * gedit /etc/sudoers
 #User privilege specification
@@ -69,7 +71,7 @@ Go to activities menu and type NVIDIA it should give you a GUI.
 * sudo apt install snapd
 * sudo snap install vlc
 
-12) Optional for streaming install OBS Studio
+12) Optional for streaming install OBS Studio(for HVENC support some additional stuff is required)
 
 * sudo apt install ffmpeg
 * sudo apt install obs-studio
@@ -80,17 +82,16 @@ Go to activities menu and type NVIDIA it should give you a GUI.
 * sudo dpkg -i libndi3_4.0.0-1_amd64.deb
 * sudo dpkg -i obs-ndi_4.7.0-1_amd64.deb
 
-Alternative:
+13) Alternative OBS-Studio snap version(Does not support NDI plugin!):
 
 * sudo snap install obs-studio
 * sudo apt-get install smplayer 
 * sudo apt-get install libnvidia-encode1 
 * sudo apt-get install simplescreenrecorder 
 
-13) Optional install shotcut for video/photo editing:
+14) Optional, install Shotcut for video/photo editing:
 
 * sudo snap install shotcut --classic
-
 
 Ok, thank you, happy gaming and streaming on Debian Buster 10.1.0.
 Hopefully same settings will work on the future Debian distros!
