@@ -46,11 +46,13 @@ Answer should be:
 * sudo apt-get update
 * sudo apt-get upgrade 
 9) Installing NVIDIA drivers:
+
 First do this just in case:
 * sudo apt install nvidia-detect
 * sudo nvidia-detect
 * sudo apt-get update
-Then do this:
+
+Then install NVIDIA Drivers:
 * sudo apt-get install nvidia-driver
 
 Wait for the installation to finish and reboot, type the following commands after reboot:
