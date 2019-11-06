@@ -1,6 +1,7 @@
 Making Debian Buster 10.1.0 suitable for gaming, streaming and video editing distro
 
- 1) Use this image https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/
+ 1) Use one of these images https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/
+ https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/10.1.0-live+nonfree/amd64/iso-hybrid/
  2) Use Rufus or whatever software you like to burn the usb stick
  3) Boot from the image
  4) Select Graphical Installer
@@ -90,18 +91,6 @@ Alternative:
 
 * sudo snap install shotcut --classic
 
-14) Optional adding and mounting a disk to Debian 10.0.0
- Make sure to format the desired disk in the GUI Disks section to Ext4:
-
-Then name the disk like ”disk1” and go to Terminal and use the following commands:
-* sudo gedit /etc/fstab 
-
-Input the following line at the bottom of the file:
-* /dev/sdc /disk1 ext4 defaults 1 2
-
-Save and run the following commands:
-* sudo mount /dev/sdc/ disk1
-* sudo apt-get update
 
 Ok, thank you, happy gaming and streaming on Debian Buster 10.1.0.
 Hopefully same settings will work on the future Debian distros!
