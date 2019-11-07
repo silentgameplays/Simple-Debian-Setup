@@ -6,17 +6,25 @@ Making Debian Buster 10.1.0 suitable for gaming, streaming and video editing dis
  3) Boot from the image
  4) Select Graphical Installer
  5) Install Debian Buster 10.1.0 on the desired partition. Make sure to be connected to the internet via cable, as there can be some firmware issues with Wi-Fi drivers!
- 6) Once the installation is complete login using Gnome interface.
+
+6) Once the installation is complete login using Gnome interface.
+
 Remember to go into Software and Updates GUI and check the following options : 
+
 * Officially supported (main)
 * DFSG-compatible Software with Non-Free Dependencies (contrib)
 * Non DFSG-compatible Software (non-free)
+
 Add security updates later in the updates section via GUI after finishing all these steps:
+
 Go to Terminal and input: 
 * sudo apt-get update
 * sudo apt-get upgrade
+
 7) Optional,if you typed your password during installation twice as Root and as User:
+
 Open terminal in activities and add your user, for example test to sudoers file and use the following commands:
+
 * su 
 * gedit /etc/sudoers
 #User privilege specification
@@ -24,7 +32,9 @@ test
 * Testing if everything works
 Switch back to test using this command: 
 * su  test
+
 Run the following command: 
+
 * sudo whoami
 Answer should be: 
 * root
@@ -37,7 +47,9 @@ NB! If you don’t have the sudo option install sudo under Su:
 test
 * Switch back to test: 
 * su  test
+
 Run the following command: 
+
 * sudo whoami
 Answer should be:
 * root
