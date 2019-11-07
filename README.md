@@ -95,6 +95,8 @@ Go to activities menu and type NVIDIA it should give you a GUI.
 
 * sudo snap install shotcut --classic
 
+NB! In case of "A start job is running for update the operating system while offline" on Debian-based systems during updates while dual-booting press E then F10 and wait for the update process to finish.
+
 Ok, thank you, happy gaming and streaming on Debian Buster 10.1.0.
 Hopefully same settings will work on the future Debian distros!
 Enjoy!
