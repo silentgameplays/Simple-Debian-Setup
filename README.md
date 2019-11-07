@@ -36,71 +36,113 @@ Switch back to test using this command:
 Run the following command: 
 
 * sudo whoami
+
 Answer should be: 
+
 * root
+
 NB! If you don’t have the sudo option install sudo under Su:
+
 * su
+
 * apt install sudo
+
 * su 
+
 * gedit /etc/sudoers
+
 #User privilege specification
 test
+
 * Switch back to test: 
+
 * su  test
 
 Run the following command: 
 
 * sudo whoami
+
 Answer should be:
+
 * root
 8) Installing Multiarch very important! (you’ll need it for NVIDIA drivers, steam and other stuff)
+
 * sudo dpkg --add-architecture i386
+
 * sudo apt-get update
+
 * sudo apt-get upgrade 
+
 9) Installing NVIDIA drivers:
 
 First do this just in case:
+
 * sudo apt install nvidia-detect
+
 * sudo nvidia-detect
+
 * sudo apt-get update
 
 Then install NVIDIA Drivers:
+
 * sudo apt-get install nvidia-driver
 
 Wait for the installation to finish and reboot, type the following commands after reboot:
+
 * sudo apt-get update
+
 * sudo apt get upgrade
 
 NB! There might be a missing firmware errors in the terminal during installtion, usually its Realtek but just to be sure run the following command:
+
 * sudo dmesg 
+
 Once you are sure use these commands:
+
 * sudo apt-get install firmware-realtek
+
 * sudo apt-get update
+
 Go to activities menu and type NVIDIA it should give you a GUI.
 
 10) Install Steam with the following commands, if you did all the steps before correctly Steam should install without issues:
+
 * sudo apt install steam
+
 11) Optional for media playback and vlc install snap:
+
 * sudo apt-get update
+
 * sudo apt install snapd
+
 * sudo snap install vlc
 
 12) Optional for streaming install OBS Studio(for HVENC support some additional stuff is required)
 
 * sudo apt install ffmpeg
+
 * sudo apt install obs-studio
+
 * sudo apt-get install smplayer 
+
 * sudo apt-get install libnvidia-encode1 
+
 * sudo apt-get install simplescreenrecorder
+
 * NDI for OBS-Studio download .deb files here:https://github.com/Palakis/obs-ndi/releases/tag/4.7.0
+
 * sudo dpkg -i libndi3_4.0.0-1_amd64.deb
+
 * sudo dpkg -i obs-ndi_4.7.0-1_amd64.deb
 
 13) Alternative OBS-Studio snap version(Does not support NDI plugin!):
 
 * sudo snap install obs-studio
+
 * sudo apt-get install smplayer 
+
 * sudo apt-get install libnvidia-encode1 
+
 * sudo apt-get install simplescreenrecorder 
 
 14) Optional, install Shotcut for video/photo editing:
