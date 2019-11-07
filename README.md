@@ -92,7 +92,7 @@ Wait for the installation to finish and reboot, type the following commands afte
 
 * sudo apt-get update
 
-* sudo apt get upgrade
+* sudo apt-get upgrade
 
 NB! There might be a missing firmware errors in the terminal during installtion, usually its Realtek but just to be sure run the following command:
 
