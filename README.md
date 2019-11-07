@@ -29,7 +29,8 @@ Open terminal in activities and add your user, for example test to sudoers file 
 * gedit /etc/sudoers
 #User privilege specification
 test
-* Testing if everything works
+
+Testing if everything works
 Switch back to test using this command: 
 * su  test
 
@@ -129,7 +130,7 @@ Go to activities menu and type NVIDIA it should give you a GUI.
 
 * sudo apt-get install simplescreenrecorder
 
-* NDI for OBS-Studio download .deb files here:https://github.com/Palakis/obs-ndi/releases/tag/4.7.0
+NDI for OBS-Studio download .deb files here:https://github.com/Palakis/obs-ndi/releases/tag/4.7.0
 
 * sudo dpkg -i libndi3_4.0.0-1_amd64.deb
 
