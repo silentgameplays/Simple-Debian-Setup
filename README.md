@@ -150,6 +150,10 @@ NDI for OBS-Studio download .deb files here:https://github.com/Palakis/obs-ndi/r
 
 * sudo snap install shotcut --classic
 
+15) Upgrade OS version and install all updates
+ 
+ *sudo apt-get update && apt-get upgrade
+
 NB! In case of "A start job is running for update the operating system while offline" on Debian-based systems during updates while dual-booting press E then F10 and wait for the update process to finish.
 
 Ok, thank you, happy gaming and streaming on Debian Buster 10.1.0.
