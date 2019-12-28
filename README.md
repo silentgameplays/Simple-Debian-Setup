@@ -1,4 +1,4 @@
-Making Debian Buster 10.1.0 suitable for gaming, streaming and video editing distro
+Making Debian suitable for gaming, streaming and video editing distro
 
  1) Use one of these images https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/
 https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/
