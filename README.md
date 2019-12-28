@@ -1,7 +1,7 @@
 Making Debian Buster 10.1.0 suitable for gaming, streaming and video editing distro
 
  1) Use one of these images https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/
- https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/10.1.0-live+nonfree/amd64/iso-hybrid/
+https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/
  2) Use Rufus(http://rufus.ie/) or whatever software you like to burn the usb stick
  3) Boot from the image
  4) Select Graphical Installer
