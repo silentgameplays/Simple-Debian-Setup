@@ -5,7 +5,7 @@ https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/
  2) Use Rufus(http://rufus.ie/) or whatever software you like to burn the usb stick
  3) Boot from the image
  4) Select Graphical Installer
- 5) Install Debian Buster 10.1.0 on the desired partition. Make sure to be connected to the internet via cable, as there can be some firmware issues with Wi-Fi drivers!
+ 5) Install Debian on the desired partition. Make sure to be connected to the internet via cable, as there can be some firmware issues with Wi-Fi drivers!
 
 6) Once the installation is complete login using Gnome interface.
 
