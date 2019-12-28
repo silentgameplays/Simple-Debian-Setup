@@ -152,6 +152,7 @@ NDI for OBS-Studio download .deb files here:https://github.com/Palakis/obs-ndi/r
 
 15) Upgrade OS version and install all updates
  
+ * sudo apt-get update
  * sudo apt-get upgrade
  * sudo apt-get dist-upgrade
 
