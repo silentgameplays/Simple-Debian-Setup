@@ -154,6 +154,10 @@ NDI for OBS-Studio download .deb files here:https://github.com/Palakis/obs-ndi/r
  * sudo apt-get update
  * sudo apt-get upgrade
  * sudo apt-get dist-upgrade
+16) Optional install discord app,go to https://discordapp.com/  select Download for Linux choose .deb:
+Open Terminal in Downloads folder and use the following commands:
+* sudo apt install gdebi-core
+* sudo gdebi discord-0.0.9.deb
 
 NB! In case of "A start job is running for update the operating system while offline" on Debian-based systems during updates while dual-booting press E then F10 and wait for the update process to finish.
 
