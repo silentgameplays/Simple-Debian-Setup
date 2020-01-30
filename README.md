@@ -138,7 +138,8 @@ test
 
 * sudo apt-get install simplescreenrecorder
 
-# NDI for OBS-Studio download .deb files here:https://github.com/Palakis/obs-ndi/releases/tag/4.7.1
+# NDI for OBS-Studio download .deb files here:
+https://github.com/Palakis/obs-ndi/releases/tag/4.7.1
 
 * sudo dpkg -i libndi3_4.0.0-1_amd64.1.deb
 * sudo dpkg -i obs-ndi_4.7.1-1_amd64.deb
@@ -165,7 +166,9 @@ test
  
  * sudo apt-get dist-upgrade
 
-# 16) Optional install discord app,go to https://discordapp.com/  select Download for Linux choose .deb:
+# 16) Optional install discord app,go to: 
+https://discordapp.com/  
+# select Download for Linux choose .deb:
 # Open Terminal in Downloads folder and use the following commands:
 
 * sudo apt install gdebi-core
