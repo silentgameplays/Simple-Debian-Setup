@@ -5,7 +5,8 @@
 https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/
 # Non-free
 https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/
- # 2) Use Rufus(http://rufus.ie/) or whatever software you like to burn the usb stick
+ # 2) Use Rufus or whatever software you like to create a bootable USB: 
+ http://rufus.ie/ 
  
  # 3) Boot from the image
  
