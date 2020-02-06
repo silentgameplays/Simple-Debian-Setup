@@ -83,7 +83,24 @@ test
 
 * sudo apt-get upgrade 
 
-# 9) Installing NVIDIA drivers:
+# 9) Installing NVIDIA drivers update the sources list if necesary for non-free:
+# Updating the sources list with non-free:
+
+* sudo nano /etc/apt/sources.list
+
+* deb http://deb.debian.org/debian buster main contrib non-free
+* deb-src http://deb.debian.org/debian buster main contrib non-free
+
+* deb http://deb.debian.org/debian-security/ buster/updates main contrib non-free
+* deb-src http://deb.debian.org/debian-security/ buster/updates main contrib non-$
+
+* deb http://deb.debian.org/debian buster-updates main contrib non-free
+* deb-src http://deb.debian.org/debian buster-updates main contrib non-free
+
+* sudo apt-get update
+
+* sudo apt-get upgrade
+
 
 # First do this just in case:
 
