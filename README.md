@@ -149,6 +149,7 @@ add
 add
 * deb http://download.opensuse.org/repositories/home:/strycore/Debian_9.0/ ./
 * wget -q https://download.opensuse.org/repositories/home:/strycore/Debian_9.0/Release.key -O- | sudo apt-key add -
+* sudo apt-get update
 * sudo apt-get install lutris
 # 11) Optional for media playback and vlc install snap:
 
