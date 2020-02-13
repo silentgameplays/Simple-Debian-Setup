@@ -137,7 +137,7 @@ test
 
 * sudo apt install steam
 * sudo apt-get install lutris
-
+* sudo apt install wget
 * wget -nc https://dl.winehq.org/wine-builds/winehq.key
 * sudo apt-key add winehq.key
 * sudo nano /etc/apt/sources.list
