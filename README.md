@@ -137,6 +137,12 @@ test
 
 * sudo apt install steam
 * sudo apt-get install lutris
+
+* wget -nc https://dl.winehq.org/wine-builds/winehq.key
+* sudo apt-key add winehq.key
+* sudo nano /etc/apt/sources.list
+add 
+* deb https://dl.winehq.org/wine-builds/debian/ bullseye main
 * sudo apt install --install-recommends winehq-stable
 
 # 11) Optional for media playback and vlc install snap:
