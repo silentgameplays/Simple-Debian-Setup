@@ -133,9 +133,11 @@ test
 
 # Go to activities menu and type NVIDIA it should give you a GUI.
 
-# 10) Install Steam with the following commands, if you did all the steps before correctly Steam should install without issues:
+# 10) Install Steam Lutris Wine with the following commands, if you did all the steps before correctly Steam should install without issues:
 
 * sudo apt install steam
+* sudo apt-get install lutris
+* sudo apt install --install-recommends winehq-stable
 
 # 11) Optional for media playback and vlc install snap:
 
