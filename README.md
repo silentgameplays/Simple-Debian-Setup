@@ -113,7 +113,7 @@ test
 # Then install NVIDIA Drivers:
 
 * sudo apt-get install nvidia-driver
-* sudo apt install nvidia-settings vulkan vulkan-utils
+* sudo apt install nvidia-settings vulkan-utils
 
 # Wait for the installation to finish and reboot, type the following commands after reboot:
 
