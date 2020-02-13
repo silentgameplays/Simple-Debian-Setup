@@ -114,6 +114,7 @@ test
 
 * sudo apt-get install nvidia-driver
 * sudo apt install nvidia-settings vulkan-utils
+* sudo apt install libvulkan1 libvulkan-dev vulkan-utils
 
 # Wait for the installation to finish and reboot, type the following commands after reboot:
 
