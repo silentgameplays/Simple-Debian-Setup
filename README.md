@@ -137,7 +137,6 @@ test
 # 10) Install Steam Lutris Wine with the following commands, if you did all the steps before correctly Steam should install without issues:
 
 * sudo apt install steam
-* sudo apt-get install lutris
 * sudo apt install wget
 * wget -nc https://dl.winehq.org/wine-builds/winehq.key
 * sudo apt-key add winehq.key
@@ -145,7 +144,12 @@ test
 add 
 * deb https://dl.winehq.org/wine-builds/debian/ bullseye main
 * sudo apt install --install-recommends winehq-stable
-
+* sudo touch /etc/apt/sources.list.d/lutris.list
+* sudo nano /etc/apt/sources.list
+add
+* deb http://download.opensuse.org/repositories/home:/strycore/Debian_9.0/ ./
+* wget -q https://download.opensuse.org/repositories/home:/strycore/Debian_9.0/Release.key -O- | sudo apt-key add -
+* sudo apt-get install lutris
 # 11) Optional for media playback and vlc install snap:
 
 * sudo apt-get update
