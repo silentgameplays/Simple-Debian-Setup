@@ -246,6 +246,13 @@ https://discordapp.com/
 * sudo apt install gdebi-core
 * sudo gdebi discord-0.0.9.deb
 
+# 17) Automount using gnomedisk utility:
+# Edit mount options
+
+# Add this line:
+
+nosuid,nodev,nofail,x-gvfs-show,auto
+
 # NB! In case of "A start job is running for update the operating system while offline" on Debian-based systems during updates while dual-booting press E then F10 and wait for the update process to finish.
 
 Ok, thank you, happy gaming and streaming on pure Debian.
