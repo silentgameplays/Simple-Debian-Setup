@@ -138,28 +138,64 @@ test
 
 * sudo apt install steam
 
-# Installl wget
+# Install wget:
+
 * sudo apt install wget
+
+# Get and register Wine key:
+
 * wget -nc https://dl.winehq.org/wine-builds/winehq.key
+
 * sudo apt-key add winehq.key
+
+# Edit the /etc/apt/sources.list file:
+
 * sudo nano /etc/apt/sources.list
-# For Testing add 
+
+# For Testing and Stable do the following: 
+
+# Testing:
+
 * deb https://dl.winehq.org/wine-builds/debian/ distro_name main
+
 * sudo apt install --install-recommends winehq-stable
 
-# For stable install Wine via software center 
-* sudo apt-get install wine
+# Stable: 
+
+* deb https://dl.winehq.org/wine-builds/debian/ distro_name main
+
+# For Stable install Wine via software center or via command: 
+
+* sudo apt install wine
+
 # For Lutris:
+
 * sudo touch /etc/apt/sources.list.d/lutris.list
+
 * sudo nano /etc/apt/sources.list
-# For any distro to install lutris add
+
+# For any distro to install lutris get the key
+
 * wget -q https://download.opensuse.org/repositories/home:/strycore/Debian_9.0/Release.key -O- | sudo apt-key add -
+
+# Add this line to the /etc/apt/sources.list file
+
 * deb http://download.opensuse.org/repositories/home:/str1ycore/Debian_9.0/ ./
+
+# Then run:
+
 * sudo apt-get update
+
+# Finally,install Lutris:
+
 * sudo apt-get install lutris
+
 # 11) Optional for media playback and vlc install snap:
+
 * sudo apt-get update
+
 * sudo apt install snapd
+
 * sudo snap install vlc
 
 # 12) Optional for streaming install OBS Studio(for HVENC support some additional stuff is required)
