@@ -88,14 +88,14 @@ test
 
 * sudo nano /etc/apt/sources.list
 
-* deb http://deb.debian.org/debian buster main contrib non-free
-* deb-src http://deb.debian.org/debian buster main contrib non-free
+* deb http://deb.debian.org/debian distro_name main contrib non-free
+* deb-src http://deb.debian.org/debian distro_name main contrib non-free
 
-* deb http://deb.debian.org/debian-security/ buster/updates main contrib non-free
-* deb-src http://deb.debian.org/debian-security/ buster/updates main contrib non-free
+* deb http://deb.debian.org/debian-security/ distro_name/updates main contrib non-free
+* deb-src http://deb.debian.org/debian-security/ distro_name/updates main contrib non-free
 
-* deb http://deb.debian.org/debian buster-updates main contrib non-free
-* deb-src http://deb.debian.org/debian buster-updates main contrib non-free
+* deb http://deb.debian.org/debian distro_name-updates main contrib non-free
+* deb-src http://deb.debian.org/debian distro_name-updates main contrib non-free
 
 * sudo apt-get update
 
