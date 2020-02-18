@@ -134,29 +134,32 @@ test
 
 # Go to activities menu and type NVIDIA it should give you a GUI.
 
-# 10) Install Steam Lutris Wine with the following commands, if you did all the steps before correctly Steam should install without issues:
+# 10) Install Steam,Lutris Wine with the following commands, if you did all the steps before correctly Steam should install without issues:
 
 * sudo apt install steam
+
+# Installl wget
 * sudo apt install wget
 * wget -nc https://dl.winehq.org/wine-builds/winehq.key
 * sudo apt-key add winehq.key
 * sudo nano /etc/apt/sources.list
-add 
-* deb https://dl.winehq.org/wine-builds/debian/ bullseye main
+# For Testing add 
+* deb https://dl.winehq.org/wine-builds/debian/ distro_name main
 * sudo apt install --install-recommends winehq-stable
+
+# For stable install Wine via software center 
+* sudo apt-get install wine
+# For Lutris:
 * sudo touch /etc/apt/sources.list.d/lutris.list
 * sudo nano /etc/apt/sources.list
-add
-* deb http://download.opensuse.org/repositories/home:/strycore/Debian_9.0/ ./
+# For any distro to install lutris add
 * wget -q https://download.opensuse.org/repositories/home:/strycore/Debian_9.0/Release.key -O- | sudo apt-key add -
+* deb http://download.opensuse.org/repositories/home:/str1ycore/Debian_9.0/ ./
 * sudo apt-get update
 * sudo apt-get install lutris
 # 11) Optional for media playback and vlc install snap:
-
 * sudo apt-get update
-
 * sudo apt install snapd
-
 * sudo snap install vlc
 
 # 12) Optional for streaming install OBS Studio(for HVENC support some additional stuff is required)
