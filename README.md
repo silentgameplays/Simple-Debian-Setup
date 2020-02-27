@@ -98,9 +98,19 @@ test
 * deb-src http://deb.debian.org/debian distro_name-updates main contrib non-free
 
 * sudo apt-get update
-
 * sudo apt-get upgrade
 
+# For testing:
+* deb      http://ftp.uk.debian.org/debian/        testing             main non-free contrib
+* deb-src  http://ftp.uk.debian.org/debian/        testing             main non-free contrib
+
+# security
+* deb      http://security.debian.org              testing-security    main non-free contrib
+* deb-src  http://security.debian.org              testing-security    main non-free contrib
+
+# updates
+* deb      http://ftp.uk.debian.org/debian/        testing-updates     main non-free contrib
+* deb-src  http://ftp.uk.debian.org/debian/        testing-updates     main non-free contrib
 
 # First do this just in case:
 
