@@ -182,16 +182,20 @@ test
 
 * sudo touch /etc/apt/sources.list.d/lutris.list
 
-* sudo nano /etc/apt/sources.list
+# Then do this:
+* echo "deb http://download.opensuse.org/repositories/home:/strycore/Debian_9.0/ ./" |
+# Inside > enter this command:
+* sudo tee /etc/apt/sources.list.d/lutris.list
 
 # For any distro to install lutris get the key
 
 * wget -q https://download.opensuse.org/repositories/home:/strycore/Debian_9.0/Release.key -O- | sudo apt-key add -
 
-# Add this line to the /etc/apt/sources.list file
+# Finally we can install and use lutris
 
-* deb http://download.opensuse.org/repositories/home:/str1ycore/Debian_9.0/ ./
+* sudo apt-get update
 
+* sudo apt-get install lutris
 # Then run:
 
 * sudo apt-get update
