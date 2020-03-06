@@ -144,7 +144,7 @@ test
 
 # Go to activities menu and type NVIDIA it should give you a GUI.
 
-# 10) Install Steam,Lutris Wine with the following commands, if you did all the steps before correctly Steam should install without issues:
+# 10) Gaming section install Steam,Lutris,Wine,DXVK with the following commands, if you did all the steps before correctly Steam should install without issues:
 
 * sudo apt install steam
 
@@ -161,6 +161,10 @@ test
 # Edit the /etc/apt/sources.list file:
 
 * sudo nano /etc/apt/sources.list
+
+# if the Vulkan libs are installed you can install dxvk
+
+* sudo apt install dxvk
 
 # For Testing and Stable do the following: 
 
@@ -204,13 +208,10 @@ test
 
 * sudo apt-get install lutris
 
-# 11) Optional for media playback and vlc install snap:
 
-* sudo apt-get update
+# 11) Optional install snap:
 
 * sudo apt install snapd
-
-* sudo snap install vlc
 
 # 12) Optional for streaming install OBS Studio(for HVENC support some additional stuff is required)
 
