@@ -259,14 +259,19 @@ https://discordapp.com/
 # Open Terminal in Downloads folder and use the following commands:
 
 * sudo apt install gdebi-core
-* sudo gdebi discord-0.0.9.deb
+* sudo gdebi discord-0.0.10.deb
 
 # 17) Automount using gnomedisk utility:
 # Edit mount options
-
 # Add this line:
 
 nosuid,nodev,nofail,x-gvfs-show,auto
+
+# 18) Benchmarking games on linux got to https://www.phoronix-test-suite.com/?k=downloads and download latest for Debian:
+* sudo apt install gdebi-core
+# 
+* sudo gdebi phoronix-test-suite_*.deb
+
 
 # NB! In case of "A start job is running for update the operating system while offline" on Debian-based systems during updates while dual-booting press E then F10 and wait for the update process to finish.
 
