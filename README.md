@@ -267,7 +267,7 @@ https://discordapp.com/
 
 nosuid,nodev,nofail,x-gvfs-show,auto
 
-# 18) Benchmarking games on linux got to https://www.phoronix-test-suite.com/?k=downloads and download latest for Debian:
+# 18) #(Optional)Benchmarking games on linux got to https://www.phoronix-test-suite.com/?k=downloads and download latest for Debian:
 * sudo apt install gdebi-core
 # 
 * sudo gdebi phoronix-test-suite_*.deb
