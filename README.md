@@ -132,7 +132,7 @@ test
 
 * sudo apt-get upgrade
 
-# Install newer NVIDIA Drivers via backports on stable:
+# (Optional) Install newer NVIDIA Drivers via backports on stable:
 
 Add buster-backports to your /etc/apt/sources.list, for example:
 * sudo nano /etc/apt/sources.list
