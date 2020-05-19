@@ -156,6 +156,7 @@ Add buster-backports to your /etc/apt/sources.list, for example:
 # Wait for the installation to finish and reboot, type the following commands after reboot:
 
 * sudo apt-get update
+
 * sudo apt-get upgrade
 
 # NB! There might be a missing firmware errors in the terminal during installtion, usually its Realtek but just to be sure run the following command:
@@ -221,19 +222,14 @@ Add buster-backports to your /etc/apt/sources.list, for example:
 
 * wget -q https://download.opensuse.org/repositories/home:/strycore/Debian_9.0/Release.key -O- | sudo apt-key add -
 
-# Finally we can install and use lutris
-
-* sudo apt-get update
-
-* sudo apt-get install lutris
 # Then run:
-
 * sudo apt-get update
-
+* sudo apt-get upgrade
 # Finally,install Lutris:
 
 * sudo apt-get install lutris
-
+* sudo apt-get update
+* sudo apt-get upgrade
 
 # 11) Optional install snap:
 
