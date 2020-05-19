@@ -123,13 +123,39 @@ test
 # Then install NVIDIA Drivers:
 
 * sudo apt-get install nvidia-driver
+
 * sudo apt install nvidia-settings vulkan-utils
+
 * sudo apt install libvulkan1 libvulkan-dev vulkan-utils
+
+* sudo apt-get update
+
+* sudo apt-get upgrade
+
+# Install newer NVIDIA Drivers via backports on stable:
+
+Add buster-backports to your /etc/apt/sources.list, for example:
+* sudo nano /etc/apt/sources.list
+
+# Add this line:
+* deb http://deb.debian.org/debian buster-backports main contrib non-free
+
+* sudo apt-get update
+
+* sudo apt-get upgrade
+
+# install the package nvidia-driver.
+* sudo apt update
+
+* sudo apt install -t buster-backports nvidia-driver 
+
+* sudo apt-get update
+
+* sudo apt-get upgrade
 
 # Wait for the installation to finish and reboot, type the following commands after reboot:
 
 * sudo apt-get update
-
 * sudo apt-get upgrade
 
 # NB! There might be a missing firmware errors in the terminal during installtion, usually its Realtek but just to be sure run the following command:
