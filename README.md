@@ -293,6 +293,13 @@ nosuid,nodev,nofail,x-gvfs-show,auto
 * sudo apt install gdebi-core
 # 
 * sudo gdebi phoronix-test-suite_*.deb
+# (100% Optional NB!Might cause issues) upgrading the kernel via backports
+* sudo nano /etc/apt/sources.list - 
+Add this line: 
+* deb http://deb.debian.org/debian buster-backports main 
+* sudo apt update 
+* sudo apt -t buster-backports install linux-image-amd64 
+* sudo reboot
 
 
 # NB! In case of "A start job is running for update the operating system while offline" on Debian-based systems during updates while dual-booting press E then F10 and wait for the update process to finish.
