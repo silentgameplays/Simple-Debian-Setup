@@ -309,7 +309,7 @@ Add this line:
 * Select your USB Drive and in the top right=corner click the menu select Format Disk
 * In Partitioning select Compatible with modern systems and hard disks>2TB (GPT)
 * Click Format wait for it to finish 
-* Click Partition>For Use with Windows(NTFS) (in Volume labele type Windows or ESD)
+* Click Partition>For Use with Windows(NTFS) (in Volume label type Windows or ESD)
 * Mount the USB and Open it
 * Go to the place where you downloaded Windows 10 ISO and select Open with Disk Image Mounter
 * Open Copy everything from the Windows 10 ISO and paste into your USB Drive,wait for it to finish(takes a while)
