@@ -301,6 +301,18 @@ Add this line:
 * sudo apt -t buster-backports install linux-image-amd64 
 * sudo reboot
 
+# 19) Creating a bootable Windows 10 USB using Disks utility (Possible on any linux distro even without GNOME)
+* Download a Windows image from MS link below:
+* https://www.microsoft.com/en-us/software-download/windows10
+* Insert USB Drive
+* Launch Disks Utility
+* Select your USB Drive and in the top right=corner click the menu select Format Disk
+* In Partitioning select Compatible with modern systems and hard disks>2TB (GPT)
+* Click Format wait for it to finish 
+* Click Partition>For Use with Windows(NTFS) (in Volume labele type Windows or ESD)
+* Mount the USB and Open it
+* Go to the place where you downloaded Windows 10 ISO and select Open with Disk Image Mounter
+* Open Copy everything from the Windows 10 ISO and paste into your USB Drive,wait for it to finish(takes a while)
 
 # NB! In case of "A start job is running for update the operating system while offline" on Debian-based systems during updates while dual-booting press E then F10 and wait for the update process to finish.
 
