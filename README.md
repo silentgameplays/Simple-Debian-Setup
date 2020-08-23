@@ -225,8 +225,8 @@ Add buster-backports to your /etc/apt/sources.list, for example:
 # Then run:
 * sudo apt-get update
 * sudo apt-get upgrade
-# Finally,install Lutris:
 
+# Finally,install Lutris:
 * sudo apt-get install lutris
 * sudo apt-get update
 * sudo apt-get upgrade
@@ -235,17 +235,22 @@ Add buster-backports to your /etc/apt/sources.list, for example:
 
 * sudo apt install snapd
 
-# 12) Optional for streaming install OBS Studio(for HVENC support some additional stuff is required)
+# 12) Optional for streaming/recording install OBS Studio(for NVENC support some additional stuff is required)
 
 * sudo apt install ffmpeg
 
-* sudo apt install obs-studio
+* sudo apt install libnvidia-encode1 
 
-* sudo apt-get install smplayer 
+* sudo apt install nvidia-cuda-toolkit
 
-* sudo apt-get install libnvidia-encode1 
+* sudo apt install flatpak
+# With GNOME Software store(for point and click installs)
 
-* sudo apt-get install simplescreenrecorder
+* apt install gnome-software-plugin-flatpak
+
+* flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+* flatpak install flathub com.obsproject.Studio
 
 # NDI for OBS-Studio download .deb files here:
 https://github.com/Palakis/obs-ndi/releases/tag/4.7.1
@@ -253,21 +258,11 @@ https://github.com/Palakis/obs-ndi/releases/tag/4.7.1
 * sudo dpkg -i libndi3_4.0.0-1_amd64.1.deb
 * sudo dpkg -i obs-ndi_4.7.1-1_amd64.deb
 
-# 13) Alternative OBS-Studio snap version(Does not support NDI plugin!):
+# 13) Optional, install Shotcut for video/photo editing:
 
-* sudo snap install obs-studio
+* flatpak install flathub org.shotcut.Shotcut
 
-* sudo apt-get install smplayer 
-
-* sudo apt-get install libnvidia-encode1 
-
-* sudo apt-get install simplescreenrecorder 
-
-# 14) Optional, install Shotcut for video/photo editing:
-
-* sudo snap install shotcut --classic
-
-# 15) Upgrade OS version and install all updates
+# 14) Upgrade OS version and install all updates
  
  * sudo apt-get update
  
@@ -275,7 +270,7 @@ https://github.com/Palakis/obs-ndi/releases/tag/4.7.1
  
  * sudo apt-get dist-upgrade
 
-# 16) Optional install discord app,go to: 
+# 15) Optional install discord app,go to: 
 https://discordapp.com/  
 # select Download for Linux choose .deb:
 # Open Terminal in Downloads folder and use the following commands:
@@ -283,13 +278,13 @@ https://discordapp.com/
 * sudo apt install gdebi-core
 * sudo gdebi discord-0.0.10.deb
 
-# 17) Automount using gnomedisk utility:
+# 16) Automount using gnomedisk utility:
 # Edit mount options
 # Add this line:
 
 nosuid,nodev,nofail,x-gvfs-show,auto
 
-# 18) #(Optional)Benchmarking games on linux got to https://www.phoronix-test-suite.com/?k=downloads and download latest for Debian:
+# 17) #(Optional)Benchmarking games on linux got to https://www.phoronix-test-suite.com/?k=downloads and download latest for Debian:
 * sudo apt install gdebi-core
 # 
 * sudo gdebi phoronix-test-suite_*.deb
@@ -301,7 +296,7 @@ Add this line:
 * sudo apt -t buster-backports install linux-image-amd64 
 * sudo reboot
 
-# 19) Creating a bootable Windows 10 USB using Disks utility (Possible on any linux distro even without GNOME)
+# 18) Creating a bootable Windows 10 USB using Disks utility (Possible on any linux distro even without GNOME)
 * Download a Windows image from MS link below:
 * https://www.microsoft.com/en-us/software-download/windows10
 * Insert USB Drive
