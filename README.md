@@ -309,8 +309,22 @@ Add this line:
 * Go to the place where you downloaded Windows 10 ISO and select Open with Disk Image Mounter
 * Open Copy everything from the Windows 10 ISO and paste into your USB Drive,wait for it to finish(takes a while)
 # (Optional) Install shadowplay as an obs plugin
-* Get nvidia-patch: https://github.com/keylase/nvidia-patch
-* Get obs-nvfbc: https://gitlab.com/fzwoch/obs-nvfbc
+* # Get nvidia-patch: https://github.com/keylase/nvidia-patch
+* Extract and go to the folder
+* Open in terminal
+* sudo ./patch-fbc.sh
+* # Get obs-nvfbc: https://gitlab.com/fzwoch/obs-nvfbc
+* Extract and go to folder
+* Open in terminal 
+* sudo apt-get install libgl-dev libobs-dev libsimde-dev meson ninja-build
+* meson build
+* ninja -C build
+* Go back to GUI and copy nvfbc.so
+* Enable hidden files and fodlers
+* Go to /home/user/.config/obs-studio
+* Create the following folders plugins->nvfbc->bin->64bit
+* paste nvfbc.so into 64bit
+* Go to OBS Studio and add the NvFBC Source to your scene
 # NB! In case of "A start job is running for update the operating system while offline" on Debian-based systems during updates while dual-booting press E then F10 and wait for the update process to finish.
 
 Ok, thank you, happy gaming and streaming on pure Debian.
