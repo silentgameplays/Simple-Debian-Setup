@@ -121,8 +121,8 @@ test
 * sudo apt update
 
 # Then install NVIDIA Drivers:
-* sudo apt install nvidia-driver firmware-misc-nonfree  nvidia-settings libvulkan-dev 
-
+* sudo apt install nvidia-driver firmware-misc-nonfree  nvidia-settings libvulkan-dev nvidia-vulkan-icd vulkan-tools  vulkan-validationlayers vulkan-validationlayers-dev
+* 
 * sudo apt update
 
 * sudo apt upgrade
