@@ -173,21 +173,7 @@ Add buster-backports to your /etc/apt/sources.list, for example:
 * sudo apt install wine
 * sudo apt install lutris
 
-# Install wget:
-
-* sudo apt install wget
-
-# Get and register Wine key:
-
-* wget -nc https://dl.winehq.org/wine-builds/winehq.key
-
-* sudo apt-key add winehq.key
-
-# Edit the /etc/apt/sources.list file:
-
-* sudo nano /etc/apt/sources.list
-
-# if the Vulkan libs are installed you can install dxvk
+# If the Vulkan libs are installed you can install dxvk(Not available on Bullseye,might work on testing and sid)
 
 * sudo apt install dxvk
 
@@ -207,29 +193,12 @@ Add buster-backports to your /etc/apt/sources.list, for example:
 
 * sudo apt install wine
 
-# For Lutris:
-
-* sudo touch /etc/apt/sources.list.d/lutris.list
-
-# Then do this:
-* echo "deb http://download.opensuse.org/repositories/home:/strycore/Debian_9.0/ ./" |
-# Inside > enter this command:
-* sudo tee /etc/apt/sources.list.d/lutris.list
-
-# For any distro to install lutris get the key
-
-* wget -q https://download.opensuse.org/repositories/home:/strycore/Debian_9.0/Release.key -O- | sudo apt-key add -
-
-# Then run:
-* sudo apt-get update
-* sudo apt-get upgrade
-
 # Finally,install Lutris:
 * sudo apt-get install lutris
 * sudo apt-get update
 * sudo apt-get upgrade
 
-# 11) Optional install snap:
+# 11) (Optional) install snap:
 
 * sudo apt install snapd
 
@@ -255,10 +224,13 @@ Add buster-backports to your /etc/apt/sources.list, for example:
 * flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 * flatpak install flathub com.obsproject.Studio
-# With KDE Plasma Discover
+
+# With KDE Plasma Discover (for point and click installs later on)
+
 * flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 * sudo apt install plasma-discover-backend-flatpak
-*  
+* flatpak install flathub com.obsproject.Studio
+
 # NDI for OBS-Studio download .deb files here:
 https://github.com/Palakis/obs-ndi/releases/tag/4.7.1
 
