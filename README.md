@@ -34,7 +34,7 @@ https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/
 
 * su 
 * gedit /etc/sudoers
-#User privilege specification
+# User privilege specification
 test
 
 # Testing if everything works
@@ -122,6 +122,7 @@ test
 
 # Then install NVIDIA Drivers:
 * sudo apt install nvidia-driver firmware-misc-nonfree  nvidia-settings libvulkan-dev nvidia-vulkan-icd vulkan-tools  vulkan-validationlayers vulkan-validationlayers-dev
+* sudo apt install fizmo-sdl2 libsdl2-2.0-0 libsdl2-dev libsdl2-gfx-1.0-0 libsdl2-gfx-dev libsdl2-image-2.0-0 libsdl2-mixer-2.0-0 libsdl2-net-2.0-0
 * 
 * sudo apt update
 
@@ -170,6 +171,8 @@ Add buster-backports to your /etc/apt/sources.list, for example:
 
 * sudo apt install steam
 * sudo apt install wine
+* sudo apt install lutris
+
 # Install wget:
 
 * sudo apt install wget
