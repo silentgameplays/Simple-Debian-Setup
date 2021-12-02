@@ -118,14 +118,14 @@ test
 
 * sudo nvidia-detect
 
-* sudo apt-get update
+* sudo apt update
 
 # Then install NVIDIA Drivers:
 * sudo apt install nvidia-driver firmware-misc-nonfree  nvidia-settings libvulkan-dev 
 
-* sudo apt-get update
+* sudo apt update
 
-* sudo apt-get upgrade
+* sudo apt upgrade
 
 # (Optional) Install newer NVIDIA Drivers via backports on stable:
 
@@ -169,7 +169,7 @@ Add buster-backports to your /etc/apt/sources.list, for example:
 # 10) Gaming section install Steam,Lutris,Wine,DXVK with the following commands, if you did all the steps before correctly Steam should install without issues:
 
 * sudo apt install steam
-
+* sudo apt install wine
 # Install wget:
 
 * sudo apt install wget
