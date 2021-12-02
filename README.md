@@ -250,12 +250,15 @@ Add buster-backports to your /etc/apt/sources.list, for example:
 
 # With GNOME Software store(for point and click installs)
 
-* apt install gnome-software-plugin-flatpak
+* sudo apt install gnome-software-plugin-flatpak
 
 * flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 * flatpak install flathub com.obsproject.Studio
-
+# With KDE Plasma Discover
+* flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+* sudo apt install plasma-discover-backend-flatpak
+*  
 # NDI for OBS-Studio download .deb files here:
 https://github.com/Palakis/obs-ndi/releases/tag/4.7.1
 
