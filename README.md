@@ -121,12 +121,7 @@ test
 * sudo apt-get update
 
 # Then install NVIDIA Drivers:
-
-* sudo apt-get install nvidia-driver
-
-* sudo apt install nvidia-settings vulkan-utils
-
-* sudo apt install libvulkan1 libvulkan-dev vulkan-utils
+* sudo apt install nvidia-driver firmware-misc-nonfree  nvidia-settings libvulkan-dev 
 
 * sudo apt-get update
 
@@ -244,6 +239,12 @@ Add buster-backports to your /etc/apt/sources.list, for example:
 * sudo apt install nvidia-cuda-toolkit
 
 * sudo apt install flatpak
+
+* sudo apt install mingw-w64 
+
+* sudo apt install ffmpeg2theora  flvmeta  mencoder  mjpegtools x265 x264 nvidia-vdpau-driver mpv mpg123 libxvidcore4
+
+
 # With GNOME Software store(for point and click installs)
 
 * apt install gnome-software-plugin-flatpak
