@@ -309,4 +309,4 @@ Add this line:
 Ok, thank you, happy gaming and streaming on pure Debian.
 Hopefully same settings will work on the future Debian distros!
 Enjoy!
-# Credit for compilation goes to gimalaji_blake
+# Credit for compilation and troubleshooting goes to silentgamepls
