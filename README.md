@@ -1,6 +1,19 @@
 # Making Debian suitable for gaming, streaming and video editing distro
-
- # 1) Use one of these images:
+# Optional doing a fresh wipe before installing Debian,use Live Boot option:
+# Formatting the SSD/HDD properly before installing Debian or any other Linux distribution or operating system:
+* sudo cfdisk /dev/sda 
+* sudo cfdisk /dev/nvme0n1
+* Delete everything you see then Write>>Yes
+# Wipping the partition schemes 
+* sudo wipefs -a /dev/sda
+* sudo wipefs /dev/nvme0n1
+# Deleting everything properly so no forencisc recovery is possible
+* sudo shred -f -v /dev/sda
+* sudo shred -f -v /nvme0n1
+# Also this works but it does not show the process:
+* sudo shred /dev/sda
+* sudo shred /dev/nvme0n1
+# 1) Use one of these images:
  # Free:
 https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/
 # Non-free
@@ -25,8 +38,8 @@ https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/
 # Add security updates later in the updates section via GUI after finishing all these steps:
 
 # Go to Terminal and input: 
-* sudo apt-get update
-* sudo apt-get upgrade
+* sudo apt update
+* sudo apt upgrade
 
 # 7) Optional,if you typed your password during installation twice as Root and as User:
 
