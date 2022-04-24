@@ -136,7 +136,6 @@ test
 # Then install NVIDIA Drivers:
 * sudo apt install nvidia-driver firmware-misc-nonfree  nvidia-settings libvulkan-dev nvidia-vulkan-icd vulkan-tools  vulkan-validationlayers vulkan-validationlayers-dev
 * sudo apt install fizmo-sdl2 libsdl2-2.0-0 libsdl2-dev libsdl2-gfx-1.0-0 libsdl2-gfx-dev libsdl2-image-2.0-0 libsdl2-mixer-2.0-0 libsdl2-net-2.0-0
-* 
 * sudo apt update
 
 * sudo apt upgrade
@@ -164,9 +163,9 @@ Add buster-backports to your /etc/apt/sources.list, for example:
 
 # Wait for the installation to finish and reboot, type the following commands after reboot:
 
-* sudo apt-get update
+* sudo apt update
 
-* sudo apt-get upgrade
+* sudo aptupgrade
 
 # NB! There might be a missing firmware errors in the terminal during installtion, usually its Realtek but just to be sure run the following command:
 
@@ -236,13 +235,15 @@ Add buster-backports to your /etc/apt/sources.list, for example:
 
 * flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-* flatpak install flathub com.obsproject.Studio
+* sudo apt update
+* sudo apt upgrade
 
 # With KDE Plasma Discover (for point and click installs later on)
 
 * flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 * sudo apt install plasma-discover-backend-flatpak
-* flatpak install flathub com.obsproject.Studio
+* sudo apt update
+* sudo apt upgrade
 
 # NDI for OBS-Studio download .deb files here:
 https://github.com/Palakis/obs-ndi/releases/tag/4.7.1
