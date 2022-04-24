@@ -221,7 +221,7 @@ Add buster-backports to your /etc/apt/sources.list, for example:
 * sudo apt install libnvidia-encode1 
 
 * sudo apt install nvidia-cuda-toolkit
-
+* sudo apt install libnvidia-fbc1
 * sudo apt install flatpak
 
 * sudo apt install mingw-w64 
