@@ -147,7 +147,7 @@ Add buster-backports to your /etc/apt/sources.list, for example:
 * sudo nano /etc/apt/sources.list
 
 # Add this line:
-* deb http://deb.debian.org/debian buster-backports main contrib non-free
+* deb http://deb.debian.org/debian distro_name-backports main contrib non-free
 
 * sudo apt-get update
 
@@ -156,7 +156,7 @@ Add buster-backports to your /etc/apt/sources.list, for example:
 # install the package nvidia-driver.
 * sudo apt update
 
-* sudo apt install -t buster-backports nvidia-driver 
+* sudo apt install -t distro_name-backports nvidia-driver 
 
 * sudo apt-get update
 
