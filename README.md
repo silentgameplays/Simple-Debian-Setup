@@ -92,9 +92,9 @@ test
 
 * sudo dpkg --add-architecture i386
 
-* sudo apt-get update
+* sudo apt update
 
-* sudo apt-get upgrade 
+* sudo apt upgrade 
 
 # 9) Installing NVIDIA drivers update the sources list if necesary for non-free:
 # Updating the sources list with non-free:
@@ -110,8 +110,8 @@ test
 * deb http://deb.debian.org/debian distro_name-updates main contrib non-free
 * deb-src http://deb.debian.org/debian distro_name-updates main contrib non-free
 
-* sudo apt-get update
-* sudo apt-get upgrade
+* sudo apt update
+* sudo apt upgrade
 
 # For testing:
 * deb      http://ftp.uk.debian.org/debian/        testing             main non-free contrib
@@ -148,24 +148,24 @@ Add buster-backports to your /etc/apt/sources.list, for example:
 # Add this line:
 * deb http://deb.debian.org/debian distro_name-backports main contrib non-free
 
-* sudo apt-get update
+* sudo apt update
 
-* sudo apt-get upgrade
+* sudo apt upgrade
 
 # install the package nvidia-driver.
 * sudo apt update
 
 * sudo apt install -t distro_name-backports nvidia-driver 
 
-* sudo apt-get update
+* sudo apt update
 
-* sudo apt-get upgrade
+* sudo apt upgrade
 
 # Wait for the installation to finish and reboot, type the following commands after reboot:
 
 * sudo apt update
 
-* sudo aptupgrade
+* sudo apt upgrade
 
 # NB! There might be a missing firmware errors in the terminal during installtion, usually its Realtek but just to be sure run the following command:
 
