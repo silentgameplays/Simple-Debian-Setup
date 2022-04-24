@@ -224,9 +224,7 @@ Add buster-backports to your /etc/apt/sources.list, for example:
 
 * sudo apt install flatpak
 
-* sudo apt install mingw-w64 
-
-* sudo apt install ffmpeg2theora  flvmeta  mencoder  mjpegtools x265 x264 nvidia-vdpau-driver mpv mpg123 libxvidcore4
+* sudo apt install mingw-w64 ffmpeg2theora  flvmeta  mencoder  mjpegtools x265 x264 nvidia-vdpau-driver mpv mpg123 libxvidcore4 fluidsynth
 
 
 # With GNOME Software store(for point and click installs)
