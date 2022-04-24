@@ -221,7 +221,7 @@ Add buster-backports to your /etc/apt/sources.list, for example:
 * sudo apt install libnvidia-encode1 
 
 * sudo apt install nvidia-cuda-toolkit
-* sudo apt install libnvidia-fbc1
+
 * sudo apt install flatpak
 
 * sudo apt install mingw-w64 
@@ -251,14 +251,17 @@ https://github.com/Palakis/obs-ndi/releases/tag/4.7.1
 * sudo dpkg -i libndi3_4.0.0-1_amd64.1.deb
 * sudo dpkg -i obs-ndi_4.7.1-1_amd64.deb
 
-# Quick way to install stuff like gzdooom:
+# Quick (non-flatpak/snapd) way to install stuff like gzdoom,zoom,teamviewer(if you need it):
 * https://zdoom.org/downloads
-
+* https://zoom.us/download
+* https://www.teamviewer.com/en/download/linux/
 * sudo dpkg -i gzdoom_4.7.1_amd64.deb
+* sudo dpkg -i zoom_amd64.deb
+* sudo dpkg -i teamviewer_15.28.8_amd64.deb
 
-# 13) Optional, install Shotcut for video/photo editing:
+# 13) Optional, install Shotcut/KDENlive for video/photo editing:
 
-* flatpak install flathub org.shotcut.Shotcut
+* sudo apt install shotcut kdenlive
 
 # 14) Upgrade OS version and install all updates
  
@@ -283,9 +286,10 @@ https://discordapp.com/
 nosuid,nodev,nofail,x-gvfs-show,auto
 
 # 17) #(Optional)Benchmarking games on linux got to https://www.phoronix-test-suite.com/?k=downloads and download latest for Debian:
+
 * sudo apt install gdebi-core
-# 
 * sudo gdebi phoronix-test-suite_*.deb
+
 # (100% Optional NB!Might cause issues) upgrading the kernel via backports
 * sudo nano /etc/apt/sources.list - 
 Add this line: 
@@ -306,12 +310,15 @@ Add this line:
 * Mount the USB and Open it
 * Go to the place where you downloaded Windows 10 ISO and select Open with Disk Image Mounter
 * Open Copy everything from the Windows 10 ISO and paste into your USB Drive,wait for it to finish(takes a while)
+
+# New requirement for NVFBC:
+* sudo apt install libnvidia-fbc1
 # (Optional) Install shadowplay as an obs plugin
-* # Get nvidia-patch: https://github.com/keylase/nvidia-patch
+# Get nvidia-patch: https://github.com/keylase/nvidia-patch
 * Extract and go to the folder
 * Open in terminal
 * sudo ./patch-fbc.sh
-* # Get obs-nvfbc: https://gitlab.com/fzwoch/obs-nvfbc
+# Get obs-nvfbc: https://gitlab.com/fzwoch/obs-nvfbc
 * Extract and go to folder
 * Open in terminal 
 * sudo apt-get install libgl-dev libobs-dev libsimde-dev meson ninja-build
