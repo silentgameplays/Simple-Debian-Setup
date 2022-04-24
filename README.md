@@ -251,6 +251,11 @@ https://github.com/Palakis/obs-ndi/releases/tag/4.7.1
 * sudo dpkg -i libndi3_4.0.0-1_amd64.1.deb
 * sudo dpkg -i obs-ndi_4.7.1-1_amd64.deb
 
+# Quick way to install stuff like gzdooom:
+* https://zdoom.org/downloads
+
+* sudo dpkg -i gzdoom_4.7.1_amd64.deb
+
 # 13) Optional, install Shotcut for video/photo editing:
 
 * flatpak install flathub org.shotcut.Shotcut
