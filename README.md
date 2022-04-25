@@ -330,6 +330,9 @@ Add this line:
 * Go to OBS Studio and add the NvFBC Source to your scene
 # (Optional) comand similar to mkinitcpio,useful sometimes:
 * sudo update-initramfs -u
+# (Optional) install better fonts and icon themes:
+ * sudo apt install fonts-hack-ttf
+ * sudo apt install papirus-icon-theme
 # NB! In case of "A start job is running for update the operating system while offline" on Debian-based systems during updates while dual-booting press E then F10 and wait for the update process to finish.
 
 Ok, thank you, happy gaming and streaming on pure Debian.
