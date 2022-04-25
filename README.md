@@ -309,6 +309,13 @@ Add this line:
 * Go to the place where you downloaded Windows 10 ISO and select Open with Disk Image Mounter
 * Open Copy everything from the Windows 10 ISO and paste into your USB Drive,wait for it to finish(takes a while)
 
+# (Optional) Install Glourious Eggroll Proton GE the easy way:
+ * Download the latest release here: https://github.com/GloriousEggroll/proton-ge-custom/releases
+ * Extract,enable hidden files and folders 
+ * Create a folder in your /home/user/config/.steam/root/compatibilitytools.d if it does not exist.
+ * Copy/paste the extracted GE folder into /home/user/config/.steam/root/compatibilitytools.d
+ * Restart Steam,enjoy the custom GE build
+
 # New requirement for NVFBC:
 * sudo apt install libnvidia-fbc1
 # (Optional) Install shadowplay as an obs plugin
