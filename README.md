@@ -125,6 +125,29 @@ test
 * deb      http://ftp.uk.debian.org/debian/        testing-updates     main non-free contrib
 * deb-src  http://ftp.uk.debian.org/debian/        testing-updates     main non-free contrib
 
+# Full Sample fopr Bullseye(replace with what you need):
+
+* deb http://deb.debian.org/debian-security/ bullseye-security main
+* deb-src http://deb.debian.org/debian-security/ bullseye-security main
+
+* deb http://deb.debian.org/debian bullseye-updates main
+* deb-src http://deb.debian.org/debian bullseye-updates main
+
+* deb http://deb.debian.org/debian bullseye main contrib non-free
+* deb-src http://deb.debian.org/debian bullseye main contrib non-free
+
+* deb http://deb.debian.org/debian-security/ bullseye-security main contrib non-f>
+* deb-src http://deb.debian.org/debian-security/ bullseye-security main contrib n>
+
+* deb http://deb.debian.org/debian bullseye-updates main contrib non-free
+* deb-src http://deb.debian.org/debian bullseye-updates main contrib non-free
+
+* deb http://deb.debian.org/debian bullseye-backports main contrib non-free
+* deb-src http://deb.debian.org/debian bullseye-backports main contrib non-free
+
+
+
+
 # First do this just in case:
 
 * sudo apt install nvidia-detect
@@ -147,7 +170,7 @@ Add buster-backports to your /etc/apt/sources.list, for example:
 
 # Add this line:
 * deb http://deb.debian.org/debian distro_name-backports main contrib non-free
-
+* deb-src http://deb.debian.org/debian distro_name-backports main contrib non-free
 * sudo apt update
 
 * sudo apt upgrade
