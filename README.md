@@ -125,7 +125,7 @@ test
 * deb      http://ftp.uk.debian.org/debian/ testing-updates main non-free contrib
 * deb-src  http://ftp.uk.debian.org/debian/ testing-updates main non-free contrib
 
-# Full Sample fopr Bullseye(replace with what you need):
+# Full Sample for Bullseye(replace with what you need free):
 
 * deb http://deb.debian.org/debian-security/ bullseye-security main
 * deb-src http://deb.debian.org/debian-security/ bullseye-security main
@@ -133,6 +133,7 @@ test
 * deb http://deb.debian.org/debian bullseye-updates main
 * deb-src http://deb.debian.org/debian bullseye-updates main
 
+# Full Sample for Bullseye(replace with what you need non-free with backports):
 * deb http://deb.debian.org/debian bullseye main contrib non-free
 * deb-src http://deb.debian.org/debian bullseye main contrib non-free
 
