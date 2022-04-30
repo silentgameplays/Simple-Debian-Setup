@@ -114,16 +114,16 @@ test
 * sudo apt upgrade
 
 # For testing:
-* deb      http://ftp.uk.debian.org/debian/        testing             main non-free contrib
-* deb-src  http://ftp.uk.debian.org/debian/        testing             main non-free contrib
+* deb      http://ftp.uk.debian.org/debian/ testing main non-free contrib
+* deb-src  http://ftp.uk.debian.org/debian/ testing main non-free contrib
 
 # security
-* deb      http://security.debian.org              testing-security    main non-free contrib
-* deb-src  http://security.debian.org              testing-security    main non-free contrib
+* deb      http://security.debian.org testing-security main non-free contrib
+* deb-src  http://security.debian.org testing-security main non-free contrib
 
 # updates
-* deb      http://ftp.uk.debian.org/debian/        testing-updates     main non-free contrib
-* deb-src  http://ftp.uk.debian.org/debian/        testing-updates     main non-free contrib
+* deb      http://ftp.uk.debian.org/debian/ testing-updates main non-free contrib
+* deb-src  http://ftp.uk.debian.org/debian/ testing-updates main non-free contrib
 
 # Full Sample fopr Bullseye(replace with what you need):
 
@@ -136,8 +136,8 @@ test
 * deb http://deb.debian.org/debian bullseye main contrib non-free
 * deb-src http://deb.debian.org/debian bullseye main contrib non-free
 
-* deb http://deb.debian.org/debian-security/ bullseye-security main contrib non-f>
-* deb-src http://deb.debian.org/debian-security/ bullseye-security main contrib n>
+* deb http://deb.debian.org/debian-security/ bullseye-security main contrib non-free
+* deb-src http://deb.debian.org/debian-security/ bullseye-security main contrib non-free
 
 * deb http://deb.debian.org/debian bullseye-updates main contrib non-free
 * deb-src http://deb.debian.org/debian bullseye-updates main contrib non-free
