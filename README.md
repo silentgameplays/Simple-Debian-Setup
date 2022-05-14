@@ -248,7 +248,7 @@ Add buster-backports to your /etc/apt/sources.list, for example:
 
 * sudo apt install flatpak
 
-* sudo apt install mingw-w64 ffmpeg2theora  flvmeta  mencoder  mjpegtools x265 x264 nvidia-vdpau-driver mpv mpg123 libxvidcore4 fluidsynth
+* sudo apt install mingw-w64 ffmpeg2theora  flvmeta smpeg-plaympeg lame mjpegtools x265 x264 nvidia-vdpau-driver mpv mpg123 libxvidcore4 fluidsynth
 
 
 # With GNOME Software store(for point and click installs)
@@ -365,8 +365,8 @@ Add this line:
  * sudo apt install fonts-hack-ttf
  * sudo apt install papirus-icon-theme
 # NB! In case of "A start job is running for update the operating system while offline" on Debian-based systems during updates while dual-booting press E then F10 and wait for the update process to finish.
-
 Ok, thank you, happy gaming and streaming on pure Debian.
 Hopefully same settings will work on the future Debian distros!
 Enjoy!
+
 # Credit for compilation and troubleshooting goes to silentgamepls
