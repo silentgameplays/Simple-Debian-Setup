@@ -157,7 +157,14 @@ test
 
 * sudo apt update
 
-# Then install NVIDIA Drivers:
+# Then install linux headers and NVIDIA Drivers:
+# x64 bit
+* sudo apt install linux-headers-amd64
+# x32 bit
+* sudo apt install linux-headers-686
+# PAE x32bit
+* sudo apt install linux-headers-686-pae
+# install the NVIDIA drivers with stuff like vulkan,etc:
 * sudo apt install nvidia-driver firmware-misc-nonfree  nvidia-settings libvulkan-dev nvidia-vulkan-icd vulkan-tools  vulkan-validationlayers vulkan-validationlayers-dev
 * sudo apt install fizmo-sdl2 libsdl2-2.0-0 libsdl2-dev libsdl2-gfx-1.0-0 libsdl2-gfx-dev libsdl2-image-2.0-0 libsdl2-mixer-2.0-0 libsdl2-net-2.0-0
 * sudo apt update
