@@ -216,10 +216,6 @@ Add buster-backports to your /etc/apt/sources.list, for example:
 * sudo apt install wine
 * sudo apt install lutris
 
-# If the Vulkan libs are installed you can install dxvk(Not available on Bullseye,might work on testing and sid)
-
-* sudo apt install dxvk
-
 # For Testing and Stable do the following: 
 
 # Testing:
