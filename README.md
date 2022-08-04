@@ -254,8 +254,9 @@ Add buster-backports to your /etc/apt/sources.list, for example:
 * sudo apt install nvidia-cuda-toolkit
 
 * sudo apt install flatpak
-
-* sudo apt install mingw-w64 ffmpeg2theora  flvmeta smpeg-plaympeg lame mjpegtools x265 x264 nvidia-vdpau-driver mpv mpg123 libxvidcore4 fluidsynth
+# Some stuff might be missing from latest testing:
+* sudo apt install ffmpeg2theora 
+* sudo apt install mingw-w64 flvmeta smpeg-plaympeg lame mjpegtools x265 x264 nvidia-vdpau-driver mpv mpg123 libxvidcore4 fluidsynth
 
 
 # With GNOME Software store(for point and click installs)
