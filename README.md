@@ -210,36 +210,14 @@ Add buster-backports to your /etc/apt/sources.list, for example:
 
 # Go to activities menu and type NVIDIA it should give you a GUI.
 
-# 10) Gaming section install Steam,Lutris,Wine,DXVK with the following commands, if you did all the steps before correctly Steam should install without issues:
+# 10) Gaming section install Steam,Lutris,Wine with the following commands, if you did all the steps before correctly Steam should install without issues:
 
 * sudo apt install steam
-* sudo apt install wine
+* sudo apt install wine wine64
 * sudo apt install lutris
+* sudo apt install scummvm
+* sudo apt install dosbox
 
-# For Testing and Stable do the following: 
-
-# Testing:
-
-* deb https://dl.winehq.org/wine-builds/debian/ distro_name main
-
-* sudo apt install --install-recommends winehq-stable
-
-# Stable: 
-
-* deb https://dl.winehq.org/wine-builds/debian/ distro_name main
-
-# For Stable install Wine via software center or via command: 
-
-* sudo apt install wine
-
-# Finally,install Lutris:
-* sudo apt-get install lutris
-* sudo apt-get update
-* sudo apt-get upgrade
-
-# 11) (Optional) install snap:
-
-* sudo apt install snapd
 
 # 12) Optional for streaming/recording install OBS Studio(for NVENC support some additional stuff is required)
 
