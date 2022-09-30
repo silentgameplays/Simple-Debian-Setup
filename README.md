@@ -321,7 +321,7 @@ Add this line:
  * Create a folder in your /home/user/steam/root/compatibilitytools.d if it does not exist.
  * Copy/paste the extracted GE folder into /home/user/config/.steam/root/compatibilitytools.d
  * Restart Steam,enjoy the custom GE build
-
+# (optional Depricated) Install Nvidia shadowplay for OBS on Debian Testing and up(DEPRICATED for OBS 28 and up because OBS version 28 no longer uses GLX)
 # New requirement for NVFBC:
 * sudo apt install libnvidia-fbc1
 # (Optional) Install shadowplay as an obs plugin
