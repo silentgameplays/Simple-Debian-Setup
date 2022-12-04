@@ -151,8 +151,6 @@ test
 * deb-src http://deb.debian.org/debian bullseye-backports main contrib non-free
 
 
-
-
 # First do this just in case:
 
 * sudo apt install nvidia-detect
@@ -172,7 +170,6 @@ test
 * sudo apt install nvidia-driver firmware-misc-nonfree  nvidia-settings libvulkan-dev nvidia-vulkan-icd vulkan-tools  vulkan-validationlayers vulkan-validationlayers-dev
 * sudo apt install fizmo-sdl2 libsdl2-2.0-0 libsdl2-dev libsdl2-gfx-1.0-0 libsdl2-gfx-dev libsdl2-image-2.0-0 libsdl2-mixer-2.0-0 libsdl2-net-2.0-0
 * sudo apt update
-
 * sudo apt upgrade
 
 # (Optional) Install newer NVIDIA Drivers via backports on stable:
@@ -236,6 +233,11 @@ Add buster-backports to your /etc/apt/sources.list, for example:
 * sudo apt install ffmpeg2theora 
 * sudo apt install mingw-w64 flvmeta smpeg-plaympeg lame mjpegtools x265 x264 nvidia-vdpau-driver mpv mpg123 libxvidcore4 fluidsynth
 
+# (Optional) different file system support:
+# BTRFS
+* sudo apt install btrfs-progs duperemove
+# XFS
+* sudo apt install xfsprogs xfsdump attr quota
 
 # With GNOME Software store(for point and click installs)
 
