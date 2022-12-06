@@ -98,7 +98,15 @@ test
 
 * sudo apt install firmware-misc-nonfree
 
+# For Intel CPU's: 
+* sudo apt install intel-ucode
+
+# for AMD CPU's:
+* sudo apt install amd-microcode
+
 * sudo update-initramfs -c -k all
+
+* sudo apt update && sudo apt ugrade
 
 # 9) Installing NVIDIA drivers update the sources list if necesary for non-free:
 # Updating the sources list with non-free:
