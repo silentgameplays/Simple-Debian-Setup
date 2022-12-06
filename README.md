@@ -106,7 +106,7 @@ test
 
 * sudo update-initramfs -c -k all
 
-* sudo apt update && sudo apt ugrade
+* sudo apt update && sudo apt upgrade
 
 # 9) Installing NVIDIA drivers update the sources list if necesary for non-free:
 # Updating the sources list with non-free:
