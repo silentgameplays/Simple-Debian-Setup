@@ -230,6 +230,17 @@ Add buster-backports to your /etc/apt/sources.list, for example:
 * sudo apt install scummvm
 * sudo apt install dosbox
 
+# (Optional) Additional dependencies for Wine/Gaming:
+* sudo apt install gvfs:i386 wine32-preloader:i386 wine64-preloader wine-binfmt gstreamer1.0-libav:i386 gstreamer1.0-plugins-bad:i386 gstreamer1.0-plugins-ugly winetricks gstreamer1.0-tools:i386 opus-tools:i386 gstreamer1.0-alsa gamemode gamescope timidity
+
+# (Optional) Opensource games:
+* sudo apt install supertux supertuxkart wesnoth 0ad kapman freedroidrpg
+
+# (Optional) Opensource games based on scummvm:
+* sudo apt install beneath-a-steel-sky drascula flight-of-the-amazon-queen lure-of-the-temptress
+
+# (Optional) Python and free IDE installation:
+* sudo apt install python3 python3-pip bpython thony
 
 # 12) Optional for streaming/recording install OBS Studio(for NVENC support some additional stuff is required)
 
@@ -237,34 +248,40 @@ Add buster-backports to your /etc/apt/sources.list, for example:
 
 * sudo apt install libnvidia-encode1 
 
+* sudo apt install libnvidia-fbc1
+
 * sudo apt install nvidia-cuda-toolkit
 
-* sudo apt install flatpak
-# Some stuff might be missing from latest testing:
-* sudo apt install ffmpeg2theora 
+# Optional dependencies for wine and codecs:
+
 * sudo apt install mingw-w64 flvmeta smpeg-plaympeg lame mjpegtools x265 x264 nvidia-vdpau-driver mpv mpg123 libxvidcore4 fluidsynth
 
 # (Optional) different file system support:
+
 # BTRFS
 * sudo apt install btrfs-progs duperemove
+
 # XFS
 * sudo apt install xfsprogs xfsdump attr quota
 
-# With GNOME Software store(for point and click installs)
+# (Optional) Install flatpak support
+# Flatpak with GNOME Software store(for point and click installs)
 
+* sudo apt install flatpak
 * sudo apt install gnome-software-plugin-flatpak
-
 * flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
 * sudo apt update
 * sudo apt upgrade
 
-# With KDE Plasma Discover (for point and click installs later on)
-
+# Flatpak with KDE Plasma Discover (for point and click installs later on)
+* sudo apt install flatpak
 * flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 * sudo apt install plasma-discover-backend-flatpak
 * sudo apt update
 * sudo apt upgrade
+# (Optional) virt manager and QEMU Installation for Virtualization
+
+* sudo apt install virt-manager qemu-system
 
 # NDI for OBS-Studio download .deb files here:
 https://github.com/Palakis/obs-ndi/releases/tag/4.7.1
@@ -272,7 +289,7 @@ https://github.com/Palakis/obs-ndi/releases/tag/4.7.1
 * sudo dpkg -i libndi3_4.0.0-1_amd64.1.deb
 * sudo dpkg -i obs-ndi_4.7.1-1_amd64.deb
 
-# Quick (non-flatpak/snapd) way to install stuff like gzdoom,zoom,teamviewer(if you need it):
+# Quick (non-flatpak/snapd) way to install stuff like gzdoom,zoom,teamviewer with dpkg(if you need it):
 * https://zdoom.org/downloads
 * https://zoom.us/download
 * https://www.teamviewer.com/en/download/linux/
@@ -280,9 +297,9 @@ https://github.com/Palakis/obs-ndi/releases/tag/4.7.1
 * sudo dpkg -i zoom_amd64.deb
 * sudo dpkg -i teamviewer_15.28.8_amd64.deb
 
-# 13) Optional, install Shotcut/KDENlive for video/photo editing:
+# 13) Optional, install Shotcut/KDENlive/Gimp/Krita for video/photo editing:
 
-* sudo apt install shotcut kdenlive
+* sudo apt install shotcut kdenlive gimp krita 
 
 # 14) Upgrade OS version and install all updates
  
@@ -320,6 +337,7 @@ Add this line:
 * sudo reboot
 
 # 18) Creating a bootable Windows 10 USB using Disks utility (Possible on any linux distro even without GNOME)
+* sudo apt install gnome-disk-utility
 * Download a Windows image from MS link below:
 * https://www.microsoft.com/en-us/software-download/windows10
 * Insert USB Drive
@@ -338,14 +356,17 @@ Add this line:
  * Create a folder in your /home/user/steam/root/compatibilitytools.d if it does not exist.
  * Copy/paste the extracted GE folder into /home/user/config/.steam/root/compatibilitytools.d
  * Restart Steam,enjoy the custom GE build
-# (optional Depricated) Install Nvidia shadowplay for OBS on Debian Testing and up(DEPRICATED for OBS 28 and up because OBS version 28 no longer uses GLX)
+
+# (Optional Depricated) Install Nvidia shadowplay for OBS on Debian Testing and up(DEPRICATED for OBS 28 and up because OBS version 28 no longer uses GLX)
 # New requirement for NVFBC:
 * sudo apt install libnvidia-fbc1
-# (Optional) Install shadowplay as an obs plugin
+# (Optional Depricated) Install shadowplay as an obs plugin
+
 # Get nvidia-patch: https://github.com/keylase/nvidia-patch
 * Extract and go to the folder
 * Open in terminal
 * sudo ./patch-fbc.sh
+
 # Get obs-nvfbc: https://gitlab.com/fzwoch/obs-nvfbc
 * Extract and go to folder
 * Open in terminal 
@@ -358,8 +379,10 @@ Add this line:
 * Create the following folders plugins->nvfbc->bin->64bit
 * paste nvfbc.so into 64bit
 * Go to OBS Studio and add the NvFBC Source to your scene
+
 # (Optional) comand similar to mkinitcpio,useful sometimes:
 * sudo update-initramfs -u
+
 # (Optional) install better fonts and icon themes:
  * sudo apt install fonts-hack-ttf
  * sudo apt install papirus-icon-theme
