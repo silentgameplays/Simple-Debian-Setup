@@ -390,5 +390,9 @@ Add this line:
 Ok, thank you, happy gaming and streaming on pure Debian.
 Hopefully same settings will work on the future Debian distros!
 Enjoy!
-
-# Credit for compilation and troubleshooting goes to silentgamepls
+# YouTube video tutorials on how to:
+# Debian Stable
+https://youtu.be/mMS7Ku6jKPQ
+# Debian Testing
+https://youtu.be/reeDsvVg-fw
+# Credit for compilation,videos and troubleshooting goes to silentgamepls
