@@ -396,7 +396,7 @@ Add this line:
 
 # Contents of FSTAB:
 
-* # <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
 
 * / was on /dev/sda2 during installation
 * UUID=362fe9a2-29fc-43fe-824d-09d1d93b1549 /               ext4    errors=remount-ro 0       1
