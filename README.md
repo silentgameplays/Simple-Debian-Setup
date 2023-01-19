@@ -391,17 +391,20 @@ Add this line:
 *sudo lsblk -f
 *sudo nano /etc/fstab 
 # Contents of FSTAB:
-# <file system> <mount point>   <type>  <options>       <dump>  <pass>
-# / was on /dev/sda2 during installation
-UUID=362fe9a2-29fc-43fe-824d-09d1d93b1549 /               ext4    errors=remount-ro 0       1
-# /boot/efi was on /dev/sda1 during installation
-UUID=64EF-0C84  /boot/efi       vfat    umask=0077      0       1
-# swap was on /dev/sda3 during installation
-UUID=b36261ad-191e-4cb5-ba0e-f2715e32f82c none            swap    sw              0       0
-/dev/sr0        /media/cdrom0   udf,iso9660 user,noauto     0       0
+
+* <file system> <mount point>   <type>  <options>       <dump>  <pass>
+
+* / was on /dev/sda2 during installation
+* UUID=362fe9a2-29fc-43fe-824d-09d1d93b1549 /               ext4    errors=remount-ro 0       1
+* /boot/efi was on /dev/sda1 during installation
+* UUID=64EF-0C84  /boot/efi       vfat    umask=0077      0       1
+
+* swap was on /dev/sda3 during installation
+* UUID=b36261ad-191e-4cb5-ba0e-f2715e32f82c none            swap    sw              0       0
+* /dev/sr0        /media/cdrom0   udf,iso9660 user,noauto     0       0
 
 # Add your SSD/HDD with its mount point here:
-/dev/sdb1       /media/user/Backup                        ext4    defaults,noatime 0      2
+* /dev/sdb1       /media/user/Backup                        ext4    defaults,noatime 0      2
 
 # Save the changes and exit,reboot,you are good 
 
