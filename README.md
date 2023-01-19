@@ -387,12 +387,16 @@ Add this line:
  * sudo apt install fonts-hack-ttf
  * sudo apt install papirus-icon-theme
 # (Optional) Adding a secondary SSD/HDD in fstab manually:
+
 # If it is an existing SSD/HDD that you already formatted with ext4 or btrfs and automounted in filemanager like Dolphin or Nemo,then you have to check in properties for example "/media/user/Backup" that is your mount point.
-*sudo lsblk -f
-*sudo nano /etc/fstab 
+
+* sudo lsblk -f
+
+* sudo nano /etc/fstab 
+
 # Contents of FSTAB:
 
-* <file system> <mount point>   <type>  <options>       <dump>  <pass>
+* # <file system> <mount point>   <type>  <options>       <dump>  <pass>
 
 * / was on /dev/sda2 during installation
 * UUID=362fe9a2-29fc-43fe-824d-09d1d93b1549 /               ext4    errors=remount-ro 0       1
