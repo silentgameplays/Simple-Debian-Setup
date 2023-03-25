@@ -125,6 +125,12 @@ test
 * deb http://deb.debian.org/debian distro_name-updates main contrib non-free
 * deb-src http://deb.debian.org/debian distro_name-updates main contrib non-free
 
+# NB With latest Bookworm DI2 Alpha the firmware is provided on the ISO,but these lines need to be added to the /etc/apt/sources.list
+
+* deb http://deb.debian.org/debian distro_name contrib non-free
+* deb-src http://deb.debian.org/debian distro_name contrib non-free
+
+
 * sudo apt update
 * sudo apt upgrade
 
