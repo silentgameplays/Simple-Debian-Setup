@@ -162,7 +162,7 @@ test
 # PAE x32bit
 * sudo apt install linux-headers-686-pae
 # install the NVIDIA drivers with stuff like vulkan,etc:
-* sudo apt install nvidia-driver firmware-misc-nonfree  nvidia-settings libvulkan-dev nvidia-vulkan-icd vulkan-tools  vulkan-validationlayers vulkan-validationlayers-dev
+* sudo apt install nvidia-driver nvidia-settings libvulkan-dev nvidia-vulkan-icd vulkan-tools  vulkan-validationlayers
 * sudo apt install fizmo-sdl2 libsdl2-2.0-0 libsdl2-dev libsdl2-gfx-1.0-0 libsdl2-gfx-dev libsdl2-image-2.0-0 libsdl2-mixer-2.0-0 libsdl2-net-2.0-0
 * sudo apt update
 * sudo apt upgrade
@@ -182,7 +182,7 @@ Add buster-backports to your /etc/apt/sources.list, for example:
 # install the package nvidia-driver.
 * sudo apt update
 
-* sudo apt install -t distro_name-backports nvidia-driver firmware-misc-nonfree nvidia-settings libvulkan-dev nvidia-vulkan-icd vulkan-tools  vulkan-validationlayers vulkan-validationlayers-dev
+* sudo apt install -t distro_name-backports nvidia-driver nvidia-settings libvulkan-dev nvidia-vulkan-icd vulkan-tools  vulkan-validationlayers vulkan-validationlayers-dev
 
 * sudo apt update
 
