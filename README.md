@@ -116,20 +116,19 @@ test
 
 * sudo nano /etc/apt/sources.list
 
-* deb http://deb.debian.org/debian distro_name main contrib non-free
-* deb-src http://deb.debian.org/debian distro_name main contrib non-free
+* deb http://deb.debian.org/debian bookworm main non-free-firmware
+* deb-src http://deb.debian.org/debian bookworm main non-free-firmware
 
-* deb http://deb.debian.org/debian-security/ distro_name/updates main contrib non-free
-* deb-src http://deb.debian.org/debian-security/ distro_name/updates main contrib non-free
+* deb http://deb.debian.org/debian-security/ bookworm-security main non-free-firmware
+* deb-src http://deb.debian.org/debian-security/ bookworm-security main non-free-firmware
 
-* deb http://deb.debian.org/debian distro_name-updates main contrib non-free
-* deb-src http://deb.debian.org/debian distro_name-updates main contrib non-free
+* deb http://deb.debian.org/debian bookworm-updates main non-free-firmware
+* deb-src http://deb.debian.org/debian bookworm-updates main non-free-firmware
 
 # NB With latest Bookworm DI2 Alpha the firmware is provided on the ISO,but these lines need to be added to the /etc/apt/sources.list
 
 * deb http://deb.debian.org/debian distro_name contrib non-free
 * deb-src http://deb.debian.org/debian distro_name contrib non-free
-
 
 * sudo apt update
 * sudo apt upgrade
@@ -145,27 +144,6 @@ test
 # updates
 * deb      http://ftp.uk.debian.org/debian/ testing-updates main non-free contrib
 * deb-src  http://ftp.uk.debian.org/debian/ testing-updates main non-free contrib
-
-# Full Sample for Bullseye(replace with what you need free):
-
-* deb http://deb.debian.org/debian-security/ bullseye-security main
-* deb-src http://deb.debian.org/debian-security/ bullseye-security main
-
-* deb http://deb.debian.org/debian bullseye-updates main
-* deb-src http://deb.debian.org/debian bullseye-updates main
-
-# Full Sample for Bullseye(replace with what you need non-free with backports):
-* deb http://deb.debian.org/debian bullseye main contrib non-free
-* deb-src http://deb.debian.org/debian bullseye main contrib non-free
-
-* deb http://deb.debian.org/debian-security/ bullseye-security main contrib non-free
-* deb-src http://deb.debian.org/debian-security/ bullseye-security main contrib non-free
-
-* deb http://deb.debian.org/debian bullseye-updates main contrib non-free
-* deb-src http://deb.debian.org/debian bullseye-updates main contrib non-free
-
-* deb http://deb.debian.org/debian bullseye-backports main contrib non-free
-* deb-src http://deb.debian.org/debian bullseye-backports main contrib non-free
 
 
 # First do this just in case:
