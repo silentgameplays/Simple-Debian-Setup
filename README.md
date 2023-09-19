@@ -365,7 +365,8 @@ Add this line:
 * Go to OBS Studio and add the NvFBC Source to your scene
 
 # (Optional) Get the older OBS Studio Versions 27 from APT:
-* sudo apt-get install obs-studio= hit the Tab key and select older version
+* sudo apt-get install obs-studio=
+* hit the Tab key and select older version
 
 # (Optional) comand similar to mkinitcpio,useful sometimes:
 * sudo update-initramfs -u
