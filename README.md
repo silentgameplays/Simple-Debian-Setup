@@ -125,13 +125,10 @@ test
 * deb http://deb.debian.org/debian bookworm-updates main non-free-firmware
 * deb-src http://deb.debian.org/debian bookworm-updates main non-free-firmware
 
-# NB With latest Bookworm DI2 Alpha the firmware is provided on the ISO,but these lines need to be added to the /etc/apt/sources.list
+* deb http://deb.debian.org/debian bookworm contrib non-free
+* deb-src http://deb.debian.org/debian bookworm contrib non-free 
 
-* deb http://deb.debian.org/debian distro_name contrib non-free
-* deb-src http://deb.debian.org/debian distro_name contrib non-free
-
-* sudo apt update
-* sudo apt upgrade
+* sudo apt update && sudo apt upgrade
 
 # For testing:
 * deb      http://ftp.uk.debian.org/debian/ testing main non-free contrib
@@ -169,14 +166,14 @@ test
 
 # (Optional) Install newer NVIDIA Drivers via backports on stable:
 
-Add buster-backports to your /etc/apt/sources.list, for example:
+Add distroname-backports to your /etc/apt/sources.list, for example:
 * sudo nano /etc/apt/sources.list
 
 # Add this line:
 * deb http://deb.debian.org/debian distro_name-backports main contrib non-free
 * deb-src http://deb.debian.org/debian distro_name-backports main contrib non-free
-* sudo apt update
 
+* sudo apt update
 * sudo apt upgrade
 
 # install the package nvidia-driver.
@@ -400,9 +397,5 @@ Add this line:
 Ok, thank you, happy gaming and streaming on pure Debian.
 Hopefully same settings will work on the future Debian distros!
 Enjoy!
-# YouTube video tutorials on how to:
-# Debian Stable
-https://youtu.be/mMS7Ku6jKPQ
-# Debian Testing
-https://youtu.be/reeDsvVg-fw
-# Credit for compilation,videos and troubleshooting goes to silentgamepls
+# YouTube:
+# silentgameplays
