@@ -164,14 +164,21 @@ test
 * sudo apt update
 * sudo apt upgrade
 # Wayland support:
+
 * sudo nano /etc/default/grub
+
 * Find  GRUB_CMDLINE_LINUX_DEFAULT="quiet splash resume"
+
 * Change to GRUB_CMDLINE_LINUX_DEFAULT="quiet nvidia-drm.modeset=1 nvidia-drm.fbdev=1 splash resume"
+
 * sudo update-grub
+
 * sudo sudo update-initramfs -u
+
 * Reboot
-* check if it worked
-* cat /sys/module/nvidia_drm/parameters/modeset
+
+* check if it worked  
+* sudo cat /sys/module/nvidia_drm/parameters/modeset
 
 # (Optional) Install newer NVIDIA Drivers via backports on stable:
 
@@ -301,7 +308,9 @@ https://github.com/Palakis/obs-ndi/releases/tag/4.7.1
 
 # 15) Optional install discord app,go to: 
 https://discordapp.com/  
+
 # select Download for Linux choose .deb:
+
 # Open Terminal in Downloads folder and use the following commands:
 
 * sudo apt install gdebi-core
@@ -346,29 +355,6 @@ Add this line:
  * Create a folder in your /home/user/steam/root/compatibilitytools.d if it does not exist.
  * Copy/paste the extracted GE folder into /home/user/config/.steam/root/compatibilitytools.d
  * Restart Steam,enjoy the custom GE build
-
-# (Optional Depricated) Install Nvidia shadowplay for OBS on Debian Testing and up(DEPRICATED for OBS 28 and up because OBS version 28 no longer uses GLX)
-# New requirement for NVFBC:
-* sudo apt install libnvidia-fbc1
-# (Optional Depricated) Install shadowplay as an obs plugin
-
-# Get nvidia-patch: https://github.com/keylase/nvidia-patch
-* Extract and go to the folder
-* Open in terminal
-* sudo ./patch-fbc.sh
-
-# Get obs-nvfbc: https://gitlab.com/fzwoch/obs-nvfbc
-* Extract and go to folder
-* Open in terminal 
-* sudo apt-get install libgl-dev libobs-dev libsimde-dev meson ninja-build
-* meson build
-* ninja -C build
-* Go back to GUI and copy nvfbc.so
-* Enable hidden files and fodlers
-* Go to /home/user/.config/obs-studio
-* Create the following folders plugins->nvfbc->bin->64bit
-* paste nvfbc.so into 64bit
-* Go to OBS Studio and add the NvFBC Source to your scene
 
 # (Optional) comand similar to mkinitcpio,useful sometimes:
 * sudo update-initramfs -u
