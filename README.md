@@ -163,6 +163,15 @@ test
 * sudo apt install fizmo-sdl2 libsdl2-2.0-0 libsdl2-dev libsdl2-gfx-1.0-0 libsdl2-gfx-dev libsdl2-image-2.0-0 libsdl2-mixer-2.0-0 libsdl2-net-2.0-0
 * sudo apt update
 * sudo apt upgrade
+# Wayland support:
+* sudo nano /etc/default/grub
+* Find  GRUB_CMDLINE_LINUX_DEFAULT="quiet splash resume"
+* Change to GRUB_CMDLINE_LINUX_DEFAULT="quiet nvidia-drm.modeset=1 nvidia-drm.fbdev=1 splash resume"
+* sudo update-grub
+* sudo sudo update-initramfs -u
+* Reboot
+* check if it worked
+* cat /sys/module/nvidia_drm/parameters/modeset
 
 # (Optional) Install newer NVIDIA Drivers via backports on stable:
 
