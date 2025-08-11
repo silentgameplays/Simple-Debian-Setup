@@ -397,6 +397,25 @@ Add this line:
  * ``sudo apt install fonts-hack-ttf``
  * ``sudo apt install papirus-icon-theme``
 
+# View BIOS/UEFI/SLOT/CPU/Memory Info
+
+* ``sudo dmidecode | less``
+* ``sudo dmidecode -s bios-version``
+* ``sudo dmidecode -s bios-release-date``
+* ``sudo dmidecode -t bios``
+* ``sudo dmidecode -t baseboard``
+* ``sudo dmidecode -t 2``
+* ``sudo dmidecode -t slot``
+* ``sudo dmidecode -t processor``
+* ``sudo dmidecode -s processor-version``
+* ``sudo dmidecode -s processor-frequency``
+* ``sudo dmidecode -t memory``
+* ``cat /sys/devices/virtual/dmi/id/board_{vendor,name,version}``
+  
+# How to check mesa vulkan driver versions:
+
+* ``glxinfo | grep "Mesa" ``
+
 # (Optional) Adding a secondary SSD/HDD in fstab manually:
 
 # If it is an existing SSD/HDD that you already formatted with ext4 or btrfs and automounted in filemanager like Dolphin or Nemo,then you have to check in properties for example "/media/user/Backup" that is your mount point.
