@@ -20,8 +20,8 @@
 * ``sudo shred /dev/nvme0n1``
 
 # Deleting everything the fast way:
-* ``sudo blkdiscard /dev/sda``
-* ``sudo blkdiscard /dev/nvme0n1``
+* ``sudo blkdiscard -f /dev/sda``
+* ``sudo blkdiscard -f /dev/nvme0n1``
 
 # 1) Use one of these images:
  # Free:
