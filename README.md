@@ -24,10 +24,8 @@
 * ``sudo blkdiscard -f /dev/nvme0n1``
 
 # 1) Use one of these images:
- # Free:
-https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/
-# Non-free
-https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/
+ https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/
+
  # 2) Use Rufus or whatever software you like to create a bootable USB: 
  http://rufus.ie/ 
  
@@ -120,7 +118,7 @@ user
 * ``sudo apt install intel-microcode``
 
 # for AMD CPU's:
-* ``sudo apt install amd-microcode``
+* ``sudo apt install amd64-microcode``
 
 * ``sudo update-initramfs -c -k all``
 
