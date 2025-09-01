@@ -534,7 +534,11 @@ Add this line:
 * ``journalctl _COMM=exe -S today``
 
 * ``ausearch -m execve --success yes``
- 
+
+# Nice network tools to have:
+* ``sudo apt install spedtest-cli bind9 bind9-doc  bind9-dnsutils  resolvconf  mmdb-bin``
+* ``sudo apt install wireshark john torbrowser-launcher``
+
 
 # NB! In case of "A start job is running for update the operating system while offline" on Debian-based systems during updates while dual-booting press E then F10 and wait for the update process to finish.
 Ok, thank you, happy gaming and streaming on pure Debian.
