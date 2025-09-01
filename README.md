@@ -273,7 +273,7 @@ Add distroname-backports to your /etc/apt/sources.list, for example:
 
 * ``sudo apt install fizmo-sdl2 libsdl2-2.0-0 libsdl2-dev libsdl2-gfx-1.0-0 libsdl2-gfx-dev libsdl2-image-2.0-0 libsdl2-mixer-2.0-0 libsdl2-net-2.0-0``
 
-* ``sudo apt install mingw-w64 flvmeta smpeg-plaympeg lame mjpegtools x265 x264 nvidia-vdpau-driver mpv mpg123 libxvidcore4 fluidsynth``
+* ``sudo apt install mingw-w64 flvmeta smpeg-plaympeg lame mjpegtools x265 x264 mpv mpg123 libxvidcore4 fluidsynth``
 
 # (Optional) Opensource games:
 * ``sudo apt install supertux supertuxkart wesnoth 0ad kapman freedroidrpg``
