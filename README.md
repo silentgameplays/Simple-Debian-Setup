@@ -236,7 +236,7 @@ Add distroname-backports to your /etc/apt/sources.list, for example:
 
 # NB! There might be a missing firmware errors in the terminal during installtion, usually its Realtek but just to be sure run the following command:
 
-* sudo dmesg 
+* ``sudo dmesg`` 
 
 # Once you are sure use these commands:
 
@@ -289,12 +289,12 @@ Add distroname-backports to your /etc/apt/sources.list, for example:
 
 # Fixing audio issues:
 
-*  sudo apt install pipewire pipewire-audio-client-libraries pipewire-pulse pipewire-alsa 
-*  systemctl --user restart wireplumber pipewire pipewire-pulse
+*  ``sudo apt install pipewire pipewire-audio-client-libraries pipewire-pulse pipewire-alsa``
+*  ``systemctl --user restart wireplumber pipewire pipewire-pulse``
 
 # Select Pro Audio,especially for USB headphone instead of Analog Stereo Duplex
 
-* sudo nano /usr/share/pipewire/pipewire.conf
+* ``sudo nano /usr/share/pipewire/pipewire.conf``
 
 # Find this line
 
