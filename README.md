@@ -243,6 +243,13 @@ Add distroname-backports to your /etc/apt/sources.list, for example:
 * ``sudo apt install firmware-amd-graphics libgl1-mesa-dri libgl1-mesa-dri:i386 libglx-mesa0 libglx-mesa0:i386 mesa-vulkan-drivers mesa-vulkan-drivers:i386 xserver-xorg-video-all``
 * ``sudo apt update && sudo apt upgrade``
 
+# Increase vm.max_map_count to Steam Deck values to prevent games crashing:
+* ``sudo nano /etc/sysctl.conf
+* Add ``vm.max_map_count = 2147483642``
+* ``sudo sysctl -p``
+* ``sudo reboot``
+* ``cat /proc/sys/vm/max_map_count``
+
 # 10) Gaming section install Steam,Lutris,Wine with the following commands, if you did all the steps before correctly Steam should install without issues:
 
 * ``sudo apt install wine wine32 wine64 libwine libwine:i386 fonts-wine steam lutris scummvm dosbox ``
