@@ -131,17 +131,17 @@ user
 
 * sudo nano /etc/apt/sources.list
 
-* deb http://deb.debian.org/debian bookworm main non-free-firmware
-* deb-src http://deb.debian.org/debian bookworm main non-free-firmware
+* deb http://deb.debian.org/debian trixie main non-free-firmware
+* deb-src http://deb.debian.org/debian trixie main non-free-firmware
 
-* deb http://deb.debian.org/debian-security/ bookworm-security main non-free-firmware
-* deb-src http://deb.debian.org/debian-security/ bookworm-security main non-free-firmware
+* deb http://deb.debian.org/debian-security/ trixie-security main non-free-firmware
+* deb-src http://deb.debian.org/debian-security/ trixie-security main non-free-firmware
 
-* deb http://deb.debian.org/debian bookworm-updates main non-free-firmware
-* deb-src http://deb.debian.org/debian bookworm-updates main non-free-firmware
+* deb http://deb.debian.org/debian trixie-updates main non-free-firmware
+* deb-src http://deb.debian.org/debian trixie-updates main non-free-firmware
 
-* deb http://deb.debian.org/debian bookworm contrib non-free
-* deb-src http://deb.debian.org/debian bookworm contrib non-free 
+* deb http://deb.debian.org/debian trixie contrib non-free
+* deb-src http://deb.debian.org/debian trixie contrib non-free 
 
 * sudo apt update && sudo apt upgrade
 
@@ -245,11 +245,13 @@ Add distroname-backports to your /etc/apt/sources.list, for example:
 
 # 10) Gaming section install Steam,Lutris,Wine with the following commands, if you did all the steps before correctly Steam should install without issues:
 
-* ``sudo apt install steam wine wine64 lutris scummvm dosbox``
+* ``sudo apt install wine wine32 wine64 libwine libwine:i386 fonts-wine steam lutris scummvm dosbox ``
 
 # (Optional) Additional dependencies for Wine/Gaming:
 
 * ``sudo apt install gvfs:i386 wine32-preloader:i386 wine64-preloader wine-binfmt gstreamer1.0-libav:i386 gstreamer1.0-plugins-bad:i386 gstreamer1.0-plugins-ugly winetricks gstreamer1.0-tools:i386 opus-tools:i386 gstreamer1.0-alsa gamemode gamescope timidity``
+
+* ` sudo apt install mono-complete``
 
 * ``sudo apt install fizmo-sdl2 libsdl2-2.0-0 libsdl2-dev libsdl2-gfx-1.0-0 libsdl2-gfx-dev libsdl2-image-2.0-0 libsdl2-mixer-2.0-0 libsdl2-net-2.0-0``
 
