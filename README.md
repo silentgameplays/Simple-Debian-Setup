@@ -313,19 +313,16 @@ Add distroname-backports to your /etc/apt/sources.list, for example:
 
 * ``sudo apt install virt-manager qemu-system``
 
-# NDI for OBS-Studio download .deb files here:
-https://github.com/Palakis/obs-ndi/releases/tag/4.7.1
-
-* ``sudo dpkg -i libndi3_4.0.0-1_amd64.1.deb``
-* ``sudo dpkg -i obs-ndi_4.7.1-1_amd64.deb``
 
 # Quick (non-flatpak/snapd) way to install stuff like gzdoom,zoom,teamviewer with dpkg(if you need it):
 * https://zdoom.org/downloads
 * https://zoom.us/download
 * https://www.teamviewer.com/en/download/linux/
+* https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/
 * ``sudo dpkg -i gzdoom_4.7.1_amd64.deb``
 * ``sudo dpkg -i zoom_amd64.deb``
 * ``sudo dpkg -i teamviewer_15.28.8_amd64.deb``
+* ``sudo dpkg -i Heroic-2.18.1-linux-amd64.deb``
 
 # 13) Optional, install Shotcut/KDENlive/Gimp/Krita for video/photo editing:
 
