@@ -179,6 +179,14 @@ user
 * ``sudo apt install nvidia-driver nvidia-settings libvulkan-dev nvidia-vulkan-icd vulkan-tools  vulkan-validationlayers``
 * ``sudo apt update && sudo apt upgrade``
 
+# Additional stuff For NVIDIA Only:
+
+* ``sudo apt install libnvidia-encode1``
+
+* ``sudo apt install libnvidia-fbc1``
+
+* ``sudo apt install nvidia-cuda-toolkit``
+
 # Wayland support for NVIDIA:
 
 * ``sudo nano /etc/default/grub``
@@ -209,6 +217,7 @@ Add distroname-backports to your /etc/apt/sources.list, for example:
 * ``sudo apt update && sudo apt upgrade``
 
 # install the package nvidia-driver.
+
 * ``sudo apt update && sudo apt upgrade``
 * ``sudo apt install -t distro_name-backports nvidia-driver nvidia-settings libvulkan-dev nvidia-vulkan-icd vulkan-tools  vulkan-validationlayers vulkan-validationlayers-dev``
 
@@ -224,6 +233,7 @@ Add distroname-backports to your /etc/apt/sources.list, for example:
 
 * ``sudo apt update && sudo apt upgrade``
 
+
 # NB! There might be a missing firmware errors in the terminal during installtion, usually its Realtek but just to be sure run the following command:
 
 * sudo dmesg 
@@ -236,10 +246,12 @@ Add distroname-backports to your /etc/apt/sources.list, for example:
 
 # Go to activities menu and type NVIDIA it should give you a GUI.
 
+
 # AMD GPU Drivers installation for games and stuff, you will need the x86 from one of the previous steps enabled 
 
 * ``sudo apt install firmware-amd-graphics libgl1-mesa-dri libgl1-mesa-dri:i386 libglx-mesa0 libglx-mesa0:i386 mesa-vulkan-drivers mesa-vulkan-drivers:i386 xserver-xorg-video-all``
 * ``sudo apt update && sudo apt upgrade``
+
 
 # Increase vm.max_map_count to Steam Deck values to prevent games crashing:
 * ``sudo nano /etc/sysctl.d/99-sysctl.conf``
@@ -260,6 +272,8 @@ Add distroname-backports to your /etc/apt/sources.list, for example:
 
 * ``sudo apt install fizmo-sdl2 libsdl2-2.0-0 libsdl2-dev libsdl2-gfx-1.0-0 libsdl2-gfx-dev libsdl2-image-2.0-0 libsdl2-mixer-2.0-0 libsdl2-net-2.0-0``
 
+* ``sudo apt install mingw-w64 flvmeta smpeg-plaympeg lame mjpegtools x265 x264 nvidia-vdpau-driver mpv mpg123 libxvidcore4 fluidsynth``
+
 # (Optional) Opensource games:
 * ``sudo apt install supertux supertuxkart wesnoth 0ad kapman freedroidrpg``
 
@@ -273,17 +287,22 @@ Add distroname-backports to your /etc/apt/sources.list, for example:
 
 * ``sudo apt install ffmpeg``
 
-# For NVIDIA Only:
+# Fixing audio issues:
 
-* ``sudo apt install libnvidia-encode1``
+*  sudo apt install pipewire pipewire-audio-client-libraries pipewire-pulse pipewire-alsa 
+*  systemctl --user restart wireplumber pipewire pipewire-pulse
 
-* ``sudo apt install libnvidia-fbc1``
+# Select Pro Audio,especially for USB headphone instead of Analog Stereo Duplex
 
-* ``sudo apt install nvidia-cuda-toolkit``
+* sudo nano /usr/share/pipewire/pipewire.conf
 
-# Optional dependencies for wine and codecs:
+# Find this line
 
-* ``sudo apt install mingw-w64 flvmeta smpeg-plaympeg lame mjpegtools x265 x264 nvidia-vdpau-driver mpv mpg123 libxvidcore4 fluidsynth``
+* #default.clock.allowed-rates = [ 48000 ]
+
+# Change to
+
+* #default.clock.allowed-rates = [ 44100 48000 96000 ]
 
 # (Optional) different file system support:
 
