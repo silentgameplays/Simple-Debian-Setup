@@ -449,7 +449,7 @@ Add this line:
 
 * ``sudo nano /etc/fstab``
 
-# Contents of FSTAB:
+ # Contents of FSTAB:
 
 # < file system > < mount point >   < type >  < options >                        < dump >  < pass >
 
@@ -466,6 +466,68 @@ Add this line:
 * ``/dev/sdb1       /media/user/Backup                        ext4    defaults,noatime 0      2``
 
 # Save the changes and exit,reboot,you are good 
+
+# 19) Cyber security
+
+# Firewall install and enable 
+* ``sudo apt install ufw``
+
+# ClamAV
+* ``sudo apt isntall clamav``
+* ``sudo freshclam``
+* ``clamscan -r --bell -i /home /tmp /var/tmp``
+* ``sudo systemctl start clamav-daemon``
+
+# Full scan if you have time
+* ``clamdscan --multiscan --fdpass / ``
+
+# Rootkit hunter:
+* ``sudo apt install rkhunter``
+* ``sudo rkhunter --update``
+* ``sudo rkhunter --check``
+
+# Check manually for malware activity with ls or in your file browser,XDG autostart jobs, bash or zsh (weird entries and services):
+
+* ``ls ~/.config/autostart/ ``
+
+* ``ls ~/.bashrc /``
+
+* ``ls ~/.zshrc ``
+
+# Systemd user services:
+  
+* ``ls ~/.config/systemd/user/``
+
+* ``ls /etc/systemd/system/``
+
+* ``ls  /usr/local/bin/ ``
+
+# Checking strage cron jobs 
+
+* ``crontab -e``
+
+* ``sudo crontab -e``
+
+# Check suspicious shadow bin entries:
+
+* ``ls /usr/local/bin/``
+
+# Check process tree for strange activity:
+
+* ``pstree -a -p``
+
+# Look for anything strange such as:
+
+* makepkg → gcc → wget → /tmp/a.out → runs as root
+
+* xdg-open readme.eml → bash → curl <IP> → ./payload
+
+# History of execution for today
+
+* ``journalctl _COMM=exe -S today``
+
+* ``ausearch -m execve --success yes``
+ 
 
 # NB! In case of "A start job is running for update the operating system while offline" on Debian-based systems during updates while dual-booting press E then F10 and wait for the update process to finish.
 Ok, thank you, happy gaming and streaming on pure Debian.
