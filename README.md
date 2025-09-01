@@ -480,7 +480,7 @@ Add this line:
 * ``sudo apt install ufw``
 
 # ClamAV
-* ``sudo apt isntall clamav``
+* ``sudo apt install clamav``
 * ``sudo freshclam``
 * ``clamscan -r --bell -i /home /tmp /var/tmp``
 * ``sudo systemctl start clamav-daemon``
