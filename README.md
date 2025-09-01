@@ -12,8 +12,8 @@
 * ``sudo wipefs -a /dev/nvme0n1``
   
 # Deleting everything properly so no forencisc recovery is possible
-* sudo shred -f -v /dev/sda
-* sudo shred -f -v /nvme0n1
+* ``sudo shred -f -v /dev/sda``
+* ``sudo shred -f -v /nvme0n1``
 
 # Without seeing progress:
 * ``sudo shred /dev/sda``
@@ -87,7 +87,6 @@ test
 
 * ``nano /etc/sudoers``
 
-
 # User privilege specification
 
 user
@@ -108,9 +107,7 @@ user
 
 * ``sudo dpkg --add-architecture i386``
 
-* ``sudo apt update``
-
-* ``sudo apt upgrade``
+* ``sudo apt update && sudo apt upgrade``
 
 * ``sudo apt install firmware-misc-nonfree``
 
@@ -250,14 +247,19 @@ Add distroname-backports to your /etc/apt/sources.list, for example:
 # AMD GPU Drivers installation for games and stuff, you will need the x86 from one of the previous steps enabled 
 
 * ``sudo apt install firmware-amd-graphics libgl1-mesa-dri libgl1-mesa-dri:i386 libglx-mesa0 libglx-mesa0:i386 mesa-vulkan-drivers mesa-vulkan-drivers:i386 xserver-xorg-video-all``
+
 * ``sudo apt update && sudo apt upgrade``
 
 
 # Increase vm.max_map_count to Steam Deck values to prevent games crashing:
 * ``sudo nano /etc/sysctl.d/99-sysctl.conf``
+
 * Add ``vm.max_map_count = 2147483642``
+
 * ``sudo sysctl --system``
+
 * ``sudo reboot``
+
 * ``cat /proc/sys/vm/max_map_count``
 
 # 10) Gaming section install Steam,Lutris,Wine with the following commands, if you did all the steps before correctly Steam should install without issues:
