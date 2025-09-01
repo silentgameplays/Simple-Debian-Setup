@@ -250,7 +250,6 @@ Add distroname-backports to your /etc/apt/sources.list, for example:
 
 * ``sudo apt update && sudo apt upgrade``
 
-
 # Increase vm.max_map_count to Steam Deck values to prevent games crashing:
 * ``sudo nano /etc/sysctl.d/99-sysctl.conf``
 
@@ -305,6 +304,14 @@ Add distroname-backports to your /etc/apt/sources.list, for example:
 # Change to
 
 * #default.clock.allowed-rates = [ 44100 48000 96000 ]
+
+# Optional easyeffects package:
+
+* ``sudo apt install easyeffects``
+
+# Launch EasyEffects and apply presets that you can download from the repo provided here LoudnessEqualizer.json:
+
+* https://github.com/Digitalone1/EasyEffects-Presets
 
 # (Optional) different file system support:
 
