@@ -194,7 +194,7 @@ user
 
 * ``sudo update-grub``
 
-* ``sudo sudo update-initramfs -u``
+* ``sudo update-initramfs -u``
 
 * ``sudo reboot``
 
