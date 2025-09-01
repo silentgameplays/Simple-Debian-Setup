@@ -244,9 +244,9 @@ Add distroname-backports to your /etc/apt/sources.list, for example:
 * ``sudo apt update && sudo apt upgrade``
 
 # Increase vm.max_map_count to Steam Deck values to prevent games crashing:
-* ``sudo nano /etc/sysctl.conf
+* ``sudo nano /etc/sysctl.d/99-sysctl.conf``
 * Add ``vm.max_map_count = 2147483642``
-* ``sudo sysctl -p``
+* ``sudo sysctl --system``
 * ``sudo reboot``
 * ``cat /proc/sys/vm/max_map_count``
 
