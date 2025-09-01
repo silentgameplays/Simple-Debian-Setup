@@ -6,7 +6,7 @@
 * ``sudo cfdisk /dev/nvme0n1``
 * Delete everything you see then Write>>Yes
 
-# Wipping the partition schemes 
+# Wiping the partition schemes 
 
 * ``sudo wipefs -a /dev/sda``
 * ``sudo wipefs -a /dev/nvme0n1``
