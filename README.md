@@ -289,7 +289,7 @@ Add distroname-backports to your /etc/apt/sources.list, for example:
 * ``sudo apt install ffmpeg``
 
 # Fixing audio issues:
-
+* ``sudo apt install libasound2 libasound2-plugins alsa-utils alsa-oss alsa-firmware-loaders``
 *  ``sudo apt install pipewire pipewire-audio-client-libraries pipewire-pulse pipewire-alsa``
 *  ``systemctl --user restart wireplumber pipewire pipewire-pulse``
 
