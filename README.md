@@ -124,7 +124,7 @@ user
 # 9) Installing NVIDIA drivers update the sources list if necesary for non-free:
 # Updating the sources list with non-free:
 
-* sudo nano /etc/apt/sources.list
+* ``sudo nano /etc/apt/sources.list``
 
 * deb http://deb.debian.org/debian trixie main non-free-firmware
 * deb-src http://deb.debian.org/debian trixie main non-free-firmware
