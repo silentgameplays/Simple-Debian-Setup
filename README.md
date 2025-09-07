@@ -301,15 +301,29 @@
 
 * ``sudo apt install steam lutris wine wine32 wine64 libwine libwine:i386 fonts-wine scummvm dosbox ``
 
+**For Steam it's optional to add main user to video and audio groups**
+
+* ``sudo usermod -a -G video,audio user``
+
 **(Optional) Additional dependencies for Wine/Gaming:**
 
 * ``sudo apt install gvfs:i386 wine32-preloader:i386 wine64-preloader wine-binfmt gstreamer1.0-libav:i386 gstreamer1.0-plugins-bad:i386 gstreamer1.0-plugins-ugly winetricks gstreamer1.0-tools:i386 opus-tools:i386 gstreamer1.0-alsa gamemode timidity``
 
-* ``sudo apt install mono-complete``
-
 * ``sudo apt install fizmo-sdl2 libsdl2-2.0-0 libsdl2-dev libsdl2-gfx-1.0-0 libsdl2-gfx-dev libsdl2-image-2.0-0 libsdl2-mixer-2.0-0 libsdl2-net-2.0-0``
 
 * ``sudo apt install mingw-w64 flvmeta smpeg-plaympeg lame mjpegtools x265 x264 mpv mpg123 libxvidcore4 fluidsynth``
+
+**(Optional) Mono package for NET framework support on Linux**
+
+* ``sudo apt install mono-complete`
+
+**Steam package has issues launching on Debian 13 Trixie even after instlaling all of the required dependencies, how to fix**
+
+1. Install ``steam`` or ``steam-installer` package and try to launch from GUI
+2. Launch terminal and type ``steam``
+3. Go into Steam Settings select toggle Interface>Run Steam when my computer starts,see picture:
+<img width="1906" height="467" alt="Screenshot_20250907_064032" src="https://github.com/user-attachments/assets/aa360317-98d6-43a7-a420-9c286bad680c" />
+4. Steam should start automatically another option is to use the terminal to launch the Steam client every time.
 
 **(Optional) Opensource games:**
 
