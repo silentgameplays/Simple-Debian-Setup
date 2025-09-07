@@ -319,7 +319,7 @@
 
 **Steam package has issues launching on Debian 13 Trixie even after instlaling all of the required dependencies, how to fix**
 
-1. Install ``steam`` or ``steam-installer` package and try to launch from GUI
+1. Install ``steam`` package and try to launch from GUI
 2. Launch terminal and type ``steam``
 3. Go into Steam Settings select toggle Interface>Run Steam when my computer starts,see picture:
 <img width="1906" height="467" alt="Screenshot_20250907_064032" src="https://github.com/user-attachments/assets/aa360317-98d6-43a7-a420-9c286bad680c" />
