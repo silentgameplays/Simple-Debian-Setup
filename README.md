@@ -325,6 +325,13 @@
 <img width="1906" height="467" alt="Screenshot_20250907_064032" src="https://github.com/user-attachments/assets/aa360317-98d6-43a7-a420-9c286bad680c" />
 4. Steam should start automatically another option is to use the terminal to launch the Steam client every time.
 
+**Another way to fix Steam not launching from GUI**
+
+1. Install steam package and try to launch from GUI
+2. Launch terminal and type steam
+3. Go into Steam Settings select toggle Enable GPU accelerated rendering in web views, you need to Disable this setting.
+4. Steam should start automatically another option is to use the terminal to launch the Steam client every time.
+
 **(Optional) Opensource games:**
 
 * ``sudo apt install supertux supertuxkart wesnoth 0ad kapman freedroidrpg``
