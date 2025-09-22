@@ -537,6 +537,7 @@
 **How to check mesa vulkan driver versions:**
 
 * ``glxinfo | grep "Mesa" ``
+* ``glxinfo | grep OpenGL``
 
 **(Optional) Adding a secondary SSD/HDD in fstab manually:**
 
