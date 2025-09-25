@@ -375,6 +375,11 @@
 * ``sudo apt purge speech-dispatcher``
 * ``sudo apt aurotemove``
 
+**(Optional) audio missing in some older games disable apparmor**
+
+* ``sudo systemctl disable apparmor``
+* ``sudo reboot``
+
 **(Optional) If audio still runs poorly there is a way to fix it,first you need to remove everything audio related on your system**
 
 * ``sudo apt purge libasound2 libasound2-plugins alsa-utils alsa-firmware-loaders pipewire pipewire-audio-client-libraries pipewire-pulse pipewire-alsa libcanberra-pulse pipewire wireplumber``
