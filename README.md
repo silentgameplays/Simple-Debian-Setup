@@ -636,8 +636,8 @@
 **Fix Wayland iBUS message on KDE Plasma**
 
 * ``sudo nano /usr/share/im-config/data/21_ibus.rc``
-* comment these lines out so they look like this:
-*`` # GTK_IM_MODULE=ibus``
+* Comment these lines out with # so they look like this:
+* ``# GTK_IM_MODULE=ibus``
 * ``# QT_IM_MODULE=ibus``
 * ``# CLUTTER_IM_MODULE=ibus``
 * Go into System Settings>Virual Keyboard and apply iBUS
