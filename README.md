@@ -633,10 +633,21 @@
 
 * ``ausearch -m execve --success yes``
 
+**Fix Wayland iBUS message on KDE Plasma**
+
+* ``sudo nano /usr/share/im-config/data/21_ibus.rc``
+* comment these lines out so they look like this:
+*`` # GTK_IM_MODULE=ibus``
+* ``# QT_IM_MODULE=ibus``
+* ``# CLUTTER_IM_MODULE=ibus``
+* Go into System Settings>Virual Keyboard and apply iBUS
+* ``sudo reboot``
+
 **(Bonus) Nice network tools to have:**
 
 * ``sudo apt install spedtest-cli bind9 bind9-doc  bind9-dnsutils  resolvconf  mmdb-bin``
 * ``sudo apt install wireshark john torbrowser-launcher``
+
 
 
 **NB! In case of "A start job is running for update the operating system while offline" on Debian-based systems during updates while dual-booting press E then F10 and wait for the update process to finish.**
