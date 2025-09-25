@@ -350,6 +350,8 @@
 
 **Fixing audio issues:**
 
+**Most gaming audio related issues in Proton/Pipewire happen because Secure Boot is enabled, installing Debian with Secure Boot disabled in BIOS/UEFI will help in these cases, Steam Deck has no Secure Boot.**
+
 **Install additional alsa and pipewire dependencies and restart pipewire service**
 
 * ``sudo apt install libasound2 libasound2-plugins alsa-utils alsa-firmware-loaders``
