@@ -315,7 +315,7 @@
 
 **(Optional) Mono package for NET framework support on Linux**
 
-* ``sudo apt install mono-complete`
+* ``sudo apt install mono-complete``
 
 **Steam package has issues launching on Debian 13 Trixie even after instlaling all of the required dependencies, how to fix**
 
@@ -350,11 +350,6 @@
 
 **Fixing audio issues:**
 
-**To fix audio crackling remove speech-dispatcher**
-
-* ``sudo apt purge speech-dispatcher``
-* ``sudo apt aurotemove``
-  
 **Install additional alsa and pipewire dependencies and restart pipewire service**
 
 * ``sudo apt install libasound2 libasound2-plugins alsa-utils alsa-firmware-loaders``
@@ -373,16 +368,21 @@
 
 * #default.clock.allowed-rates = [ 44100 48000 96000 ]
 
-**If audio still runs poorly there is a way to fix it,first you need to remove everything audio related on your system**
+**(Optional)To fix audio crackling remove speech-dispatcher**
 
-* ``sudo apt purge libasound2 libasound2-plugins alsa-utils alsa-firmware-loaders pipewire pipewire-audio-client-libraries pipewire-pulse pipewire-alsa libcanberra-pulse pipewire wireplumber pipewire-pa``
+* ``sudo apt purge speech-dispatcher``
+* ``sudo apt aurotemove``
+
+**(Optional) If audio still runs poorly there is a way to fix it,first you need to remove everything audio related on your system**
+
+* ``sudo apt purge libasound2 libasound2-plugins alsa-utils alsa-firmware-loaders pipewire pipewire-audio-client-libraries pipewire-pulse pipewire-alsa libcanberra-pulse pipewire wireplumber``
 * ``sudo apt update && sudo apt upgrade``
 * ``sudo apt autoremove``
 * ``sudo reboot``
 
 **Reinstall everything audio related on your system**
 
-* ``sudo apt install libasound2 libasound2-plugins alsa-utils alsa-firmware-loaders pipewire pipewire-audio-client-libraries pipewire-pulse pipewire-alsa libcanberra-pulse pipewire wireplumber pipewire-pa``
+* ``sudo apt install libasound2 libasound2-plugins alsa-utils alsa-firmware-loaders pipewire pipewire-audio-client-libraries pipewire-pulse pipewire-alsa libcanberra-pulse pipewire wireplumber``
 * ``sudo apt update && sudo apt upgrade``
 * ``systemctl --user restart wireplumber pipewire pipewire-pulse``
 
