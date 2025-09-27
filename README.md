@@ -373,7 +373,7 @@
 **(Optional)To fix audio crackling remove speech-dispatcher**
 
 * ``sudo apt purge speech-dispatcher``
-* ``sudo apt aurotemove``
+* ``sudo apt autoremove``
 
 **(Optional) audio missing in some older games disable apparmor**
 
