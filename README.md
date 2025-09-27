@@ -393,9 +393,11 @@
 * ``sudo apt update && sudo apt upgrade``
 * ``systemctl --user restart wireplumber pipewire pipewire-pulse``
 
-**(Optional) easyeffects package:**
+**(Optional) easyeffects package and more audio plugins:**
 
 * ``sudo apt install easyeffects``
+* ``sudo apt install lsp-plugins-lv2 calf-plugins x42-plugins zam-plugins``
+
 
 **Launch EasyEffects and apply presets that you can download from the repo provided here LoudnessEqualizer.json:**
 
