@@ -190,9 +190,16 @@
 
 * ``sudo apt install linux-headers-686-pae``
 
-**Install the NVIDIA drivers with stuff like vulkan,etc:**
+**For NVIDIA Choose one of the two options**
 
-* ``sudo apt install nvidia-driver nvidia-settings libvulkan-dev nvidia-vulkan-icd vulkan-tools  vulkan-validationlayers``
+**(Option 1)Install the proprietary NVIDIA drivers with dependencies like vulkan,etc:**
+
+* ``sudo apt install nvidia-kernel-dkms nvidia-driver nvidia-settings libvulkan-dev nvidia-vulkan-icd vulkan-tools  vulkan-validationlayers``
+* ``sudo apt update && sudo apt upgrade``
+
+**(Option 2)Install the open NVIDIA  drivers for RTX GPU's with dependencies like vulkan**
+
+* ``sudo apt install nvidia-open-kernel-dkms nvidia-driver nvidia-settings libvulkan-dev nvidia-vulkan-icd vulkan-tools  vulkan-validationlayers``
 * ``sudo apt update && sudo apt upgrade``
 
 **Additional stuff For NVIDIA Only:**
@@ -219,6 +226,10 @@
 
 **Check if it worked:**
   
+* ``sudo cat /sys/module/nvidia_drm/parameters/modeset``
+
+**Simpler way**
+* ``echo "options nvidia-drm modeset=1" >> /etc/modprobe.d/nvidia-options.conf``
 * ``sudo cat /sys/module/nvidia_drm/parameters/modeset``
 
 **(Optional) Install newer NVIDIA Drivers via backports on stable:**
