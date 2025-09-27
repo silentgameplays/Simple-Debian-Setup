@@ -228,10 +228,6 @@
   
 * ``sudo cat /sys/module/nvidia_drm/parameters/modeset``
 
-**Simpler way**
-* ``echo "options nvidia-drm modeset=1" >> /etc/modprobe.d/nvidia-options.conf``
-* ``sudo cat /sys/module/nvidia_drm/parameters/modeset``
-
 **(Optional) Install newer NVIDIA Drivers via backports on stable:**
 
 **Add distroname-backports to your** ``/etc/apt/sources.list`` **,for example:**
