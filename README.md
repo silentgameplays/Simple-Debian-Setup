@@ -310,7 +310,7 @@
 
 **For Steam it's optional to add main user to video and audio groups**
 
-* ``sudo usermod -a -G video,audio user``
+* ``sudo usermod -a -G video,audio,adm user``
 
 **(Optional) Additional dependencies for Wine/Gaming:**
 
