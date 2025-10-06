@@ -376,6 +376,10 @@
 
 * #default.clock.allowed-rates = [ 44100 48000 96000 ]
 
+**(Desktop Only) Disable hybernate,sleep and other default settings for gaming purposes, do not use on laptops!**
+
+* ``sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target``
+
 **(Optional)To fix audio crackling remove speech-dispatcher**
 
 * ``sudo apt purge speech-dispatcher``
