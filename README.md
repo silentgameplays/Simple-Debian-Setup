@@ -359,7 +359,7 @@
 
 * ``sudo apt install python3 python3-pip bpython thony``
 
-# 9. Optional for streaming/recording install OBS Studio(for NVENC support some additional stuff is required)
+# 9. Additional Pipewire dependencies, Easy Effects, disable hibernation and other tips.
 
 * ``sudo apt install ffmpeg``
 
@@ -384,9 +384,10 @@
 
 * #default.clock.allowed-rates = [ 44100 48000 96000 ]
 
-**(Desktop Only) Disable hybernate,sleep and other default settings for gaming purposes, do not use on laptops!**
+**(Desktop Only) Disable hibernate,sleep and other default settings for gaming purposes, do not use on laptops!**
 
 * ``sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target``
+* ``sudo reboot``
 
 **(Optional)To fix audio crackling remove speech-dispatcher**
 
