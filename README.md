@@ -339,6 +339,14 @@
 3. Go into Steam Settings select toggle Enable GPU accelerated rendering in web views, you need to Disable this setting.
 4. Steam should start automatically another option is to use the terminal to launch the Steam client every time.
 
+**(Optional) Install Glourious Eggroll Proton GE the easy way:**
+
+ * Download the latest release here: https://github.com/GloriousEggroll/proton-ge-custom/releases
+ * Extract,enable hidden files and folders 
+ * Create a folder in your /home/user/steam/root/compatibilitytools.d if it does not exist.
+ * Copy/paste the extracted GE folder into /home/user/config/.steam/root/compatibilitytools.d
+ * Restart Steam,enjoy the custom GE build
+ 
 **(Optional) Opensource games:**
 
 * ``sudo apt install supertux supertuxkart wesnoth 0ad kapman freedroidrpg``
