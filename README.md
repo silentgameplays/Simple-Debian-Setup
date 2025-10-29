@@ -304,6 +304,14 @@
 
 * ``cat /proc/sys/vm/max_map_count``
 
+**Enable VRR (freesync/gsync) Support for GNOME**
+
+* ``gsettings set org.gnome.mutter experimental-features "['variable-refresh-rate']"``
+
+**Exit the current Wayland session, re-login and type to check, the output should be "variable-refresh-rate"**
+
+* ``gsettings get org.gnome.mutter experimental-features``
+  
 # 8. Gaming section install Steam,Lutris,Wine with the following commands, if you did all the steps before correctly then Steam should install without issues:
 
 * ``sudo apt install steam lutris wine wine32 wine64 libwine libwine:i386 fonts-wine scummvm dosbox ``
