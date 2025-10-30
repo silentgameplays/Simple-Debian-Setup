@@ -546,7 +546,7 @@
 * ``sudo dmidecode -s processor-frequency``
 * ``sudo dmidecode -t memory``
 * ``cat /sys/devices/virtual/dmi/id/board_{vendor,name,version}``
-  
+* ``sudo lspci -v | less``
 **View temps, if not installed then install the sensors package**
   
 * ``sudo apt install lm-sensors``
