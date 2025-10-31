@@ -668,7 +668,25 @@
 * ``sudo apt install spedtest-cli bind9 bind9-doc  bind9-dnsutils  resolvconf  mmdb-bin``
 * ``sudo apt install wireshark john torbrowser-launcher``
 
+**(Bonus) Reset Windows Password from a Debian Live USB**
+* ``sudo apt install chntpw``
+* ``sudo sfdisk -l``
+* ``sudo mount /dev/sda2 /mnt/Microsoft/``
+* ``cd /mnt/Microsoft/Windows/System32/config/``
+* ``sudo chntpw -i SAM``
 
+**Then type 1 (for Edit user data and passwords):**
+![passwordreset_username-1](https://github.com/user-attachments/assets/c41cd77c-6420-4620-a4fd-869bb4f87f6a)
+
+**Type your user account name (i.e., Archit-PC in this example) for the username:**
+![passwordreset_username-2](https://github.com/user-attachments/assets/44eabc2a-6a23-4cbf-b26a-4b8a4c58c99e)
+
+**Type 1 to clear the user password or 2 to set a new password for the Archit-PC user, then quit and save the changes:**
+![passwordreset_username-1](https://github.com/user-attachments/assets/e7bfc201-c189-4198-869d-64eba3a29a9b)
+
+![passwordreset_username-2](https://github.com/user-attachments/assets/142fec77-b047-43a7-b5ce-62b8a3f820a3)
+
+**Reboot into Windows and login**
 
 **NB! In case of "A start job is running for update the operating system while offline" on Debian-based systems during updates while dual-booting press E then F10 and wait for the update process to finish.**
 Ok, thank you, happy gaming and streaming on pure Debian.
