@@ -671,7 +671,14 @@
 **(Bonus) Reset Windows Password from a Debian Live USB**
 * ``sudo apt install chntpw``
 * ``sudo sfdisk -l``
+
+**For regular SSD's/HDD's:**
+
 * ``sudo mount /dev/sda2 /mnt/Microsoft/``
+
+**For NVME SSD's:**
+
+* ``sudo mount /dev/nvme0n1p2 /mnt/Microsoft``
 * ``cd /mnt/Microsoft/Windows/System32/config/``
 * ``sudo chntpw -i SAM``
 
