@@ -377,7 +377,7 @@
 
 **Install additional alsa and pipewire dependencies and restart pipewire service**
 
-* ``sudo apt install libasound2 libasound2-plugins alsa-utils alsa-firmware-loaders pipewire-audio pipewire pipewire-audio-client-libraries pipewire-pulse pipewire-alsa libcanberra-pulse pipewire wireplumber``
+* ``sudo apt install libasound2t64 libasound2-plugins alsa-utils alsa-firmware-loaders pipewire-audio pipewire pipewire-audio-client-libraries pipewire-pulse pipewire-alsa libcanberra-pulse pipewire wireplumber``
 * ``systemctl --user restart wireplumber pipewire pipewire-pulse``
 
 **Select Pro Audio,especially for USB headphones instead of Analog Stereo Duplex:**
