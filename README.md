@@ -311,6 +311,13 @@
 **Exit the current Wayland session, re-login and type to check, the output should be "variable-refresh-rate"**
 
 * ``gsettings get org.gnome.mutter experimental-features``
+
+**Disable VRR for GNOME**
+* ``gsettings set org.gnome.mutter experimental-features "[]"``
+
+**Exit the current Wayland session, re-login and type to check, the output should be "[]"**
+
+* ``gsettings get org.gnome.mutter experimental-features``
   
 # 8. Gaming section install Steam,Lutris,Wine with the following commands, if you did all the steps before correctly then Steam should install without issues:
 
@@ -433,7 +440,11 @@
 * ``flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo``
 
 * ``sudo apt update && sudo apt upgrade``
+  
+**(Optional) GNOME extensions and tweaks**
 
+* ``sudo apt install gnome-tweaks gnome-shell-extension-manager gnome-shell-extensions gnome-shell-extensions-extra``
+  
 **Flatpak with KDE Plasma Discover (for point and click software center application installations)**
 
 * ``sudo apt install flatpak``
