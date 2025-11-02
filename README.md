@@ -664,6 +664,17 @@
 
 * ``ausearch -m execve --success yes``
 
+**Check and clean apt cache**
+* ``ls /var/cache/apt/archives``
+* ``sudo du -sh /var/cache/apt/archives``
+* ``sudo apt-get clean --dry-run``
+* ``sudo apt-get clean``
+
+**A way to remove packages that are not downloaded from repositories, standar oudated .deb files**
+
+* ``sudo apt autoclean --dry-run``
+* ``sudo apt autoclean``
+
 **Fix Wayland iBUS message on KDE Plasma**
 
 * ``sudo nano /usr/share/im-config/data/21_ibus.rc``
