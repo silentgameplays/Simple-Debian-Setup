@@ -318,6 +318,16 @@
 **Exit the current Wayland session, re-login and type to check, the output should be "[]"**
 
 * ``gsettings get org.gnome.mutter experimental-features``
+
+**Disable the annoying Force Quit pop up on GNOME:**
+
+**60 seconds**
+
+* ``gsettings set org.gnome.mutter check-alive-timeout 60000``
+
+**Never check***
+* ``gsettings set org.gnome.mutter check-alive-timeout 0``
+
   
 # 8. Gaming section install Steam,Lutris,Wine with the following commands, if you did all the steps before correctly then Steam should install without issues:
 
@@ -455,6 +465,21 @@
 
 * ``sudo apt update && sudo apt upgrade``
   
+**(Optional) Installing flatpak apps from the command line**
+* ``flatpak install protontricks vcmi fheroes2 openmw``
+
+**Let protontricks app have permissions for other drives on Steam**
+
+* ``flatpak override --user --filesystem=/mnt/MySSDName/SteamLibrary com.github.Matoking.protontricks``
+
+**Install a flatpak app with --system wide or --user wide permissions**
+* ``flatpak install openmw --system``
+* ``flatpak isntall openmw --user``
+
+**Remove flatpak apps**
+* ``flatpak uninstall openmw``
+* ``flatpak remove openmw``
+
 **(Optional) virt manager and QEMU Installation for Virtualization**
 
 * ``sudo apt install virt-manager qemu-system``
@@ -469,6 +494,10 @@
 * ``sudo dpkg -i zoom_amd64.deb``
 * ``sudo dpkg -i teamviewer_15.28.8_amd64.deb``
 * ``sudo dpkg -i Heroic-2.18.1-linux-amd64.deb``
+
+**(Optional) removing apps with dpkg along with their config files**
+
+* ``sudo dpkg -r -P Heroic-2.18.1-linux-amd64.deb``
 
 # 10. (Optional) install Shotcut/KDENlive/Gimp/Krita for video/photo editing:
 
@@ -537,6 +566,12 @@
 **(Optional) comand similar to mkinitcpio,useful sometimes:**
 
 * ``sudo update-initramfs -u``
+
+**(Optional) check for obsolete packages**
+
+* ``sudo apt list '?obsolete'``
+
+
 
 **(Optional) install better fonts and icon themes:**
 
