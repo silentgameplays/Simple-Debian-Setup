@@ -440,18 +440,19 @@
 * ``sudo nano /etc/systemd/sleep.conf``
 
 **Uncomment and set to no**
-``[Sleep]``
-``#AllowSuspend=yes`` 
-``#AllowHibernation=yes``
-``#AllowSuspendThenHibernate=yes``
-``#AllowHybridSleep=yes``
+*``[Sleep]``
+*``#AllowSuspend=yes`` 
+*``#AllowHibernation=yes``
+*``#AllowSuspendThenHibernate=yes``
+*``#AllowHybridSleep=yes``
   
-**To disable suspend it should look like this**   
-``[Sleep]``
-``AllowSuspend=no``
-``AllowHibernation=no``
-``AllowSuspendThenHibernate=no``
-``AllowHybridSleep=no`` 
+**To disable suspend it should look like this**
+
+*``[Sleep]``
+*``AllowSuspend=no``
+*``AllowHibernation=no``
+*``AllowSuspendThenHibernate=no``
+*``AllowHybridSleep=no`` 
 
 **Check if worked**
 * ``systemctl suspend``
