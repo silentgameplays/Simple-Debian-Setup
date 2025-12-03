@@ -435,6 +435,27 @@
 * ``sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target``
 * ``sudo reboot``
 
+**(Another way to disable suspend and hybernate**
+
+* ``sudo nano /etc/systemd/sleep.conf``
+
+**Uncomment and set to no**
+``[Sleep]``
+``#AllowSuspend=yes`` 
+``#AllowHibernation=yes``
+``#AllowSuspendThenHibernate=yes``
+``#AllowHybridSleep=yes``
+  
+**To disable suspend it should look like this**   
+``[Sleep]``
+``AllowSuspend=no``
+``AllowHibernation=no``
+``AllowSuspendThenHibernate=no``
+``AllowHybridSleep=no`` 
+
+**Check if worked**
+* ``systemctl suspend``
+
 **(Optional)To fix audio crackling remove speech-dispatcher**
 
 * ``sudo apt purge speech-dispatcher``
