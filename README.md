@@ -328,7 +328,28 @@
 **Never check***
 * ``gsettings set org.gnome.mutter check-alive-timeout 0``
 
+**Disable suspend on GNOME**
+
+**Check types if active will reply `suspend`**
+
+* ``gsettings get org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type``
+
+**Check states should reply `true`**
+
+* ``gsettings writable org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type``
+
+**Check range of available states**
+
+* ``gsettings range org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type``
   
+**Enter**
+
+* ``gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'``
+
+**Check again should reply `nothing`**
+
+* ``gsettings get org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type``
+
 # 8. Gaming section install Steam,Lutris,Wine with the following commands, if you did all the steps before correctly then Steam should install without issues:
 
 * ``sudo apt install steam lutris wine wine32 wine64 libwine libwine:i386 fonts-wine scummvm dosbox ``
