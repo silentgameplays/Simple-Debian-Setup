@@ -328,28 +328,6 @@
 **Never check***
 * ``gsettings set org.gnome.mutter check-alive-timeout 0``
 
-**Disable suspend on GNOME**
-
-**Check types if active will reply `suspend`**
-
-* ``gsettings get org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type``
-
-**Check states should reply `true`**
-
-* ``gsettings writable org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type``
-
-**Check range of available states**
-
-* ``gsettings range org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type``
-  
-**Enter**
-
-* ``gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'``
-
-**Check again should reply `nothing`**
-
-* ``gsettings get org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type``
-
 # 8. Gaming section install Steam,Lutris,Wine with the following commands, if you did all the steps before correctly then Steam should install without issues:
 
 * ``sudo apt install steam lutris wine wine32 wine64 libwine libwine:i386 fonts-wine scummvm dosbox ``
@@ -430,12 +408,29 @@
 
 * #default.clock.allowed-rates = [ 44100 48000 96000 ]
 
-**(Desktop Only) Disable hibernate,sleep and other default settings for gaming purposes, do not use on laptops!**
+ 
+**(Optional)To fix audio crackling remove speech-dispatcher**
+
+* ``sudo apt purge speech-dispatcher``
+* ``sudo apt autoremove``
+
+**(Optional) easyeffects package and more audio plugins:**
+
+* ``sudo apt install easyeffects``
+* ``sudo apt install lsp-plugins-lv2 calf-plugins x42-plugins zam-plugins``
+
+
+**Launch EasyEffects and apply presets that you can download from the repo provided here LoudnessEqualizer.json:**
+
+* https://github.com/Digitalone1/EasyEffects-Presets
+
+
+**(Desktop Only) Disable hibernate, sleep and other default settings for gaming purposes works best on KDE Plasma/XFCE, do not use on laptops!**
 
 * ``sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target``
 * ``sudo reboot``
 
-**(Another way to disable suspend and hybernate**
+**Another "PROPER" way to disable suspend and hybernate on GNOME**
 
 * ``sudo nano /etc/systemd/sleep.conf``
 
@@ -456,21 +451,31 @@
 
 **Check if worked**
 * ``systemctl suspend``
+**This is the error message you should get**
+* ``Call to Suspend failed: Sleep verb 'suspend' is disabled by config``
+**To re-enable suspend just revert the changes**
 
-**(Optional)To fix audio crackling remove speech-dispatcher**
+**(Additional steps) Disable suspend on GNOME**
 
-* ``sudo apt purge speech-dispatcher``
-* ``sudo apt autoremove``
+**Check types if active will reply `suspend`**
 
-**(Optional) easyeffects package and more audio plugins:**
+* ``gsettings get org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type``
 
-* ``sudo apt install easyeffects``
-* ``sudo apt install lsp-plugins-lv2 calf-plugins x42-plugins zam-plugins``
+**Check states should reply `true`**
 
+* ``gsettings writable org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type``
 
-**Launch EasyEffects and apply presets that you can download from the repo provided here LoudnessEqualizer.json:**
+**Check range of available states**
 
-* https://github.com/Digitalone1/EasyEffects-Presets
+* ``gsettings range org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type``
+  
+**Enter**
+
+* ``gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'``
+
+**Check again should reply `nothing`**
+
+* ``gsettings get org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type``
 
 **(Optional) Different file system support:**
 
