@@ -626,6 +626,10 @@
  * ``sudo apt install fonts-hack-ttf``
  * ``sudo apt install papirus-icon-theme``
 
+**Mass install fonts on GNOME**
+* Mass copy the desired fonts to the ``/usr/local/share/fonts/ ``
+* ``fc-cache /usr/local/share/fonts/``
+
 **View BIOS/UEFI/SLOT/CPU/Memory Info**
 
 * ``sudo dmidecode | less``
