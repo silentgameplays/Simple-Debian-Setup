@@ -546,6 +546,8 @@
 **(Optional) removing apps with dpkg along with their config files**
 
 * ``sudo dpkg -r -P Heroic-2.18.1-linux-amd64.deb``
+* ``sudo dpkg --remove --force-depends heroic``
+* ``sudo dpkg --purge --force-depends heroic``
 
 # 10. (Optional) install Shotcut/KDENlive/Gimp/Krita for video/photo editing:
 
