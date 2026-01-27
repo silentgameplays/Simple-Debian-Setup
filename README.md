@@ -541,11 +541,11 @@
 * ``sudo dpkg -i gzdoom_4.7.1_amd64.deb``
 * ``sudo dpkg -i zoom_amd64.deb``
 * ``sudo dpkg -i teamviewer_15.28.8_amd64.deb``
-* ``sudo dpkg -i Heroic-2.18.1-linux-amd64.deb``
+* ``sudo dpkg -i Heroic-2.19.0-linux-amd64.deb``
 
 **(Optional) removing apps with dpkg along with their config files**
 
-* ``sudo dpkg -r -P Heroic-2.18.1-linux-amd64.deb``
+* ``sudo dpkg -r -P Heroic-2.19.0-linux-amd64.deb``
 * ``sudo dpkg --remove --force-depends heroic``
 * ``sudo dpkg --purge --force-depends heroic``
 
