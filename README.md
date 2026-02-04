@@ -621,8 +621,6 @@
 
 * ``sudo apt list '?obsolete'``
 
-
-
 **(Optional) install better fonts and icon themes:**
 
  * ``sudo apt install fonts-hack-ttf``
@@ -647,6 +645,7 @@
 * ``sudo dmidecode -t memory``
 * ``cat /sys/devices/virtual/dmi/id/board_{vendor,name,version}``
 * ``sudo lspci -v | less``
+
 **View temps, if not installed then install the sensors package**
   
 * ``sudo apt install lm-sensors``
@@ -656,7 +655,8 @@
 
 * ``glxinfo | grep "Mesa" ``
 * ``glxinfo | grep OpenGL``
-
+* ``vulkaninfo``
+  
 **How to check pipewire version**
 
 * ``pactl info|grep "Server Name"``
@@ -758,6 +758,11 @@
 * ``sudo du -sh /var/cache/apt/archives``
 * ``sudo apt-get clean --dry-run``
 * ``sudo apt-get clean``
+
+
+**Check and delete history:**
+* ``history``
+* ``history -c; rm ~/.bash_history``
 
 **A way to remove packages that are not downloaded from repositories, standar oudated .deb files**
 
