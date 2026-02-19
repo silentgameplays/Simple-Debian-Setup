@@ -144,6 +144,86 @@
 * deb      http://ftp.uk.debian.org/debian/ testing-updates main non-free contrib
 * deb-src  http://ftp.uk.debian.org/debian/ testing-updates main non-free contrib
 
+# New debian.sources.list:
+
+* ``sudo nano /etc/apt/sources.list.d/debian.sources``
+# For current stable Trixie:
+
+* ``Types: deb deb-src``
+* ``URIs: https://deb.debian.org/debian``
+* ``Suites: trixie trixie-updates``
+* ``Components: main non-free-firmware``
+* ``Enabled: yes``
+* ``Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg``
+
+* ``Types: deb deb-src``
+* ``URIs: https://security.debian.org/debian-security``
+* ``Suites: trixie-security``
+* ``Components: main non-free-firmware``
+* ``Enabled: yes``
+* ``Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg``
+
+# With contrib non-free:
+
+* ``sudo nano /etc/apt/sources.list.d/debian.sources``
+
+* ``Types: deb deb-src``
+* ``URIs: https://deb.debian.org/debian``
+* ``Suites: trixie trixie-updates``
+* ``Components: main non-free-firmware contrib non-free``
+* ``Enabled: yes``
+* ``Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg``
+
+* ``Types: deb deb-src``
+* ``URIs: https://security.debian.org/debian-security``
+* ``Suites: trixie-security``
+* ``Components: main non-free-firmware contrib non-free``
+* ``Enabled: yes``
+* ``Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg``
+
+
+* ``sudo nano /etc/apt/sources.list.d/debian.sources``
+
+# With backports:
+
+* ``Types: deb deb-src``
+* ``URIs: https://deb.debian.org/debian``
+* ``Suites: trixie trixie-updates``
+* ``Components: main non-free-firmware contrib non-free trixie-backports ``
+* ``Enabled: yes``
+* ``Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg``
+
+* ``Types: deb deb-src``
+* ``URIs: https://security.debian.org/debian-security``
+* ``Suites: trixie-security``
+* ``Components: main non-free-firmware contrib non-free trixie-backports ``
+* ``Enabled: yes``
+* ``Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg``
+
+# Testing
+* ``sudo nano /etc/apt/sources.list.d/debian.sources``
+
+* ``Types: deb deb-src``
+* ``URIs: https://deb.debian.org/debian``
+* ``Suites: forky forky-updates``
+* ``Components: main non-free-firmware contrib non-free``
+* ``Enabled: yes``
+* ``Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg``
+
+* ``Types: deb deb-src``
+* ``URIs: https://security.debian.org/debian-security``
+* ``Suites: forky-security``
+* ``Components: main non-free-firmware contrib non-free``
+* ``Enabled: yes``
+* ``Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg``
+
+# SID
+
+* ``Types: deb``
+* ``URIs: https://deb.debian.org/debian/``
+*``Suites: sid``
+*``Components: main contrib non-free non-free-firmware``
+*``Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg``
 
 # 7. Adding Multiarch is very important! 
 **(You will need it for AMD and NVIDIA drivers,Vulkan,Steam,Lutris,Heroic and other gaming related things)**
