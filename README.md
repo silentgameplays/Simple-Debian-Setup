@@ -147,6 +147,7 @@
 # New debian.sources.list:
 
 * ``sudo nano /etc/apt/sources.list.d/debian.sources``
+
 # For current stable Trixie:
 
 * ``Types: deb deb-src``
@@ -165,8 +166,6 @@
 
 # With contrib non-free:
 
-* ``sudo nano /etc/apt/sources.list.d/debian.sources``
-
 * ``Types: deb deb-src``
 * ``URIs: https://deb.debian.org/debian``
 * ``Suites: trixie trixie-updates``
@@ -181,8 +180,6 @@
 * ``Enabled: yes``
 * ``Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg``
 
-
-* ``sudo nano /etc/apt/sources.list.d/debian.sources``
 
 # With backports:
 
@@ -201,7 +198,6 @@
 * ``Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg``
 
 # Testing
-* ``sudo nano /etc/apt/sources.list.d/debian.sources``
 
 * ``Types: deb deb-src``
 * ``URIs: https://deb.debian.org/debian``
@@ -217,13 +213,14 @@
 * ``Enabled: yes``
 * ``Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg``
 
+
 # SID
 
 * ``Types: deb``
 * ``URIs: https://deb.debian.org/debian/``
-*``Suites: sid``
-*``Components: main contrib non-free non-free-firmware``
-*``Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg``
+* ``Suites: sid``
+* ``Components: main contrib non-free non-free-firmware``
+* ``Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg``
 
 # 7. Adding Multiarch is very important! 
 **(You will need it for AMD and NVIDIA drivers,Vulkan,Steam,Lutris,Heroic and other gaming related things)**
