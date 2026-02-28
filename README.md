@@ -404,6 +404,8 @@
 
 **Never check***
 * ``gsettings set org.gnome.mutter check-alive-timeout 0``
+**Disable notification sounds on GNOME DE**
+* ``gsettings set org.gnome.desktop.sound event-sounds false``
 
 # 8. Gaming section install Steam,Lutris,Wine with the following commands, if you did all the steps before correctly then Steam should install without issues:
 
