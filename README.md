@@ -411,8 +411,12 @@
 * ``gsettings set org.gnome.mutter check-alive-timeout 60000``
 
 **Never check***
+
 * ``gsettings set org.gnome.mutter check-alive-timeout 0``
-**Disable notification sounds on GNOME DE**
+  
+
+**Disable notification sounds on GNOME, helps when playing fullscreen games**
+
 * ``gsettings set org.gnome.desktop.sound event-sounds false``
 
 # 8. Gaming section install Steam,Lutris,Wine with the following commands, if you did all the steps before correctly then Steam should install without issues:
@@ -445,6 +449,7 @@
 
 
 **Another way to fix Steam not launching from GUI**
+
 1. Install steam package and try to launch from GUI
 2. Launch terminal and type steam
 3. Go into Steam Settings select toggle Enable GPU accelerated rendering in web views, you need to Disable this setting.
@@ -496,7 +501,7 @@
 * #default.clock.allowed-rates = [ 44100 48000 96000 ]
 
  
-**(Optional)To fix audio crackling remove speech-dispatcher**
+**(Optional)To fix audio crackling remove speech-dispatcher, if it makes things worse just reinstall it back**
 
 * ``sudo apt purge speech-dispatcher``
 * ``sudo apt autoremove``
@@ -537,9 +542,13 @@
 * ``AllowHybridSleep=no`` 
 
 **Check if worked**
+
 * ``systemctl suspend``
+
 **This is the error message you should get**
+
 * ``Call to Suspend failed: Sleep verb 'suspend' is disabled by config``
+
 **To re-enable suspend just revert the changes**
 
 **(Additional steps) Disable suspend on GNOME**
@@ -560,7 +569,9 @@
 
 * ``gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'``
 
+
 **Check again should reply `nothing`**
+
 
 * ``gsettings get org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type``
 
@@ -569,7 +580,7 @@
 
 * ``sudo systemctl disable apparmor``
 
-*``sudo apt remove --assume-yes --purge apparmor``
+* ``sudo apt remove --assume-yes --purge apparmor``
 
 
 **(Optional) Different file system support:**
