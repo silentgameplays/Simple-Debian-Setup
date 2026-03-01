@@ -517,7 +517,7 @@
 * ``sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target``
 * ``sudo reboot``
 
-**Another "PROPER" way to disable suspend and hybernate on GNOME**
+**Another "PROPER" way to disable suspend and hybernate**
 
 * ``sudo nano /etc/systemd/sleep.conf``
 
@@ -563,6 +563,14 @@
 **Check again should reply `nothing`**
 
 * ``gsettings get org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type``
+
+
+**Disable or remove apparmor**
+
+* ``sudo systemctl disable apparmor``
+
+*``sudo apt remove --assume-yes --purge apparmor``
+
 
 **(Optional) Different file system support:**
 
