@@ -576,11 +576,16 @@
 * ``gsettings get org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type``
 
 
-**Disable or remove apparmor**
+**Disable or remove apparmor to fix possible issues related to gaming**
 
+* ``sudo aa-status``
 * ``sudo systemctl disable apparmor``
-
 * ``sudo apt remove --assume-yes --purge apparmor``
+
+**If you want to install apparamor back just use** 
+
+* ``sudo apt install apparamor``
+* ``sudo systemctl enable --now apparamor``
 
 
 **(Optional) Different file system support:**
