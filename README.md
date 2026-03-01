@@ -787,7 +787,8 @@
 
 **Firewall install and enable via GUI:**
 
-* ``sudo apt install ufw``
+* ``sudo apt install ufw gufw``
+  
 
 **ClamAV**
 
@@ -854,7 +855,6 @@
 * ``sudo apt-get clean --dry-run``
 * ``sudo apt-get clean``
 
-
 **Check and delete history:**
 * ``history``
 * ``history -c; rm ~/.bash_history``
@@ -876,7 +876,7 @@
 
 **(Bonus) Nice network tools to have:**
 
-* ``sudo apt install spedtest-cli bind9 bind9-doc  bind9-dnsutils  resolvconf  mmdb-bin``
+* ``sudo apt install speedtest-cli bind9 bind9-doc  bind9-dnsutils  resolvconf  mmdb-bin``
 * ``sudo apt install wireshark john torbrowser-launcher``
 
 **(Bonus) Reset Windows Password from a Debian Live USB**
