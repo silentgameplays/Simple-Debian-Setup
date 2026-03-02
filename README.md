@@ -520,6 +520,24 @@
 
 * https://github.com/Digitalone1/EasyEffects-Presets
 
+**How to fix crackling and audio cut off issues with OBS Studio when using input and output**
+1. Go /home/user/.config/
+2. Create folder ``pipewire`` and inside the folder create another folder ``pipewire.conf.d``
+3. Create a file ``99-low-latency.conf``and paste it into the ``pipewire.conf.d`` so it looks like this ``~/.config/pipewire/pipewire.conf.d/99-low-latency.conf``
+4. Put the following lines into the ``99-low-latency.conf`` file and save.
+ * ``sudo nano ~/.config/pipewire/pipewire.conf.d/99-low-latency.conf``
+ * ``context.properties = {``
+ * ``default.clock.rate = 48000``
+ * ``default.clock.allowed-rates = [ 44100 48000 96000 ]``
+ * ``default.clock.quantum = 512``
+ * ``default.clock.min-quantum = 512``
+ * ``default.clock.max-quantum = 512``
+ * ``}``
+
+**run these commands**
+
+* ``systemctl --user restart wireplumber.service``
+* ``systemctl --user restart pipewire.service``
 
 **(Desktop Only) Disable hibernate, sleep and other default settings for gaming purposes works best on KDE Plasma/XFCE, do not use on laptops!**
 
@@ -579,18 +597,16 @@
 
 * ``gsettings get org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type``
 
-
-**Disable or remove apparmor to fix possible issues related to gaming**
+**(Optional) Disable and remove apparmor to fix possible issues related to gaming audio**
 
 * ``sudo aa-status``
 * ``sudo systemctl disable apparmor``
 * ``sudo apt remove --assume-yes --purge apparmor``
 
-**If you want to install apparamor back just use** 
+**If you want to install apparamor back just use these commands** 
 
 * ``sudo apt install apparamor``
 * ``sudo systemctl enable --now apparamor``
-
 
 **(Optional) Different file system support:**
 
