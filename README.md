@@ -520,7 +520,14 @@
 
 * https://github.com/Digitalone1/EasyEffects-Presets
 
-**How to fix crackling and audio cut off issues with OBS Studio when using input and output**
+
+**Proper OBS Studio installation to avoid audio cut offs for Trixie**
+
+* ``sudo apt install linux-headers-amd64 obs-studio v4l2loopback-dkms``
+
+**In audio settings select opus.**
+
+**(Optional) How to fix crackling and audio cut off issues with OBS Studio when using input and output for Trixie**
 1. Go /home/user/.config/
 2. Create folder ``pipewire`` and inside the folder create another folder ``pipewire.conf.d``
 3. Create a file ``99-low-latency.conf``and paste it into the ``pipewire.conf.d`` so it looks like this ``~/.config/pipewire/pipewire.conf.d/99-low-latency.conf``
