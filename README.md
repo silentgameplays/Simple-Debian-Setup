@@ -1,4 +1,4 @@
-# Making Debian suitable for gaming, streaming and video editing distro
+# Making Debian suitable for gaming, streaming and video editing
 **Optional doing a fresh wipe before installing Debian,use Live Boot option:**
 **Formatting the SSD/HDD properly before installing Debian or any other Linux distribution or operating system:**
 
@@ -143,6 +143,10 @@
 
 * deb      http://ftp.uk.debian.org/debian/ testing-updates main non-free contrib
 * deb-src  http://ftp.uk.debian.org/debian/ testing-updates main non-free contrib
+
+# To modernize sources on Debian Trixie use this command, this raises a small issue with Trixie-backports that is saved as a separate file in the same location as the new sources list:
+
+* ``sudo apt modernize-sources``
 
 # New debian.sources.list:
 
