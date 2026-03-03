@@ -919,8 +919,20 @@
 
 **(Bonus) Nice network tools to have:**
 
-* ``sudo apt install speedtest-cli bind9 bind9-doc  bind9-dnsutils  resolvconf  mmdb-bin``
+* ``sudo apt install speedtest-cli bind9 bind9-doc bind9-dnsutils resolvconf mmdb-bin whois``
 * ``sudo apt install wireshark john torbrowser-launcher``
+
+**(Optional) Searching for files related to an application like steam,wine,net or anything else:**
+
+* ``find . -type f -name *.inf -exec grep -n 'steam' /dev/null {} +``
+* ``find . -type f -name *.inf -exec grep -n 'steam' /dev/null {} +``
+
+**(Optional)Monitoring network**
+* ``ss -4``
+* ``ss -6``
+* ``ss -p``
+* ``nslookup debian.org``
+* ``whois 127.0.0.1``
 
 **(Bonus) Reset Windows Password from a Debian Live USB**
 * ``sudo apt install chntpw``
