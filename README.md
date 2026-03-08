@@ -443,6 +443,17 @@
 
 * ``sudo apt install mono-complete``
 
+**(Optional) For every older like Devil May Cry collection or newer game that does not display cutscenes properly,regardless of Proton/Wine version, go into the games folder with videos, open the terminal inside the folders with videos and use this fix, ffmpeg installed on the system is a reuirement**
+
+* ``sudo pacman -S ffmpeg``
+**This is for mpg/mp4**
+
+* ``for FMV in *.wmv; do ffmpeg -i $FMV ${FMV:0:-4}.mp4; rm $FMV; mv -- ${FMV:0:-4}.mp4 $FMV; done``
+
+**This is for bin, you can experiment by removing qscale or testing different values of qscale**
+
+*  ``for FMV in *.bin; do ffmpeg -i $FMV -qscale 4 ${FMV:0:-4}.wmv; rm $FMV; mv -- ${FMV:0:-4}.wmv $FMV; done``
+
 **Steam package has issues launching on Debian 13 Trixie even after instlaling all of the required dependencies, how to fix**
 
 1. Install ``steam`` package and try to launch from GUI
