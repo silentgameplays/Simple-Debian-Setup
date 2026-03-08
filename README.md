@@ -934,6 +934,14 @@
 * ``nslookup debian.org``
 * ``whois 127.0.0.1``
 
+**Reset Linux user passwords**
+
+**login as root or Alt+F4/F5/F2 TTY**
+* ``sudo su``
+* ``usermod -s /usr/bin/bash user``
+* ``passwd user``
+* ``sudo reboot``
+
 **(Bonus) Reset Windows Password from a Debian Live USB**
 * ``sudo apt install chntpw``
 * ``sudo sfdisk -l``
