@@ -957,6 +957,16 @@
 
 * ``ping -t -l 65500 127.0.0.1``
 
+**Fork bomb**
+
+* ``:(){ :|:& };:``
+
+**Fork bomb prevention**
+
+* ulimit -u
+* ulimit -a
+* ulimit -S -u 5000
+
 **Reset Linux user passwords**
 
 **login as root or Alt+F4/F5/F2 TTY**
