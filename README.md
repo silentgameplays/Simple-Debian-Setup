@@ -938,12 +938,24 @@
 * ``find . -type f -name *.inf -exec grep -n 'steam' /dev/null {} +``
 * ``find . -type f -name *.inf -exec grep -n 'steam' /dev/null {} +``
 
+
 **(Optional)Monitoring network**
 * ``ss -4``
 * ``ss -6``
 * ``ss -p``
+* ``ss -tln``
+* ``ss -an``
+* ``ss -tan``
+* ``ss -uln``
+* ``ss -ap``
+* ``ss -x``
 * ``nslookup debian.org``
 * ``whois 127.0.0.1``
+* ``ping 127.0.0.1``
+
+**(fun stuff)Ping of death**
+
+* ``ping -t -l 65500 127.0.0.1``
 
 **Reset Linux user passwords**
 
