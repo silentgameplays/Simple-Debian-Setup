@@ -957,6 +957,40 @@
 
 * ``ping -t -l 65500 127.0.0.1``
 
+**Use nmap to scan ports and IPs**
+
+* ``sudo apt install nmap`` 
+* ``sudo nmap -A``
+* ``sudo nmap -O``
+* ``sudo nmap scanme.nmap.org``
+* ``sudo nmap -sV scanme.nmap.org``
+* ``sudo nmap -sV scanme.nmap.org``
+* ``sudo nmap -A scanme.nmap.org``
+* ``sudo nmap 192.164.1.*``
+* ``sudo nmap -p 76–973 192.164.0.1``
+* ``sudo nmap --top-ports 10 scanme.nmap.org``
+* ``sudo nmap -v scanme.nmap.org``
+* ``sudo nmap -sn 192.168.1.0/24``
+* ``sudo nmap -sV -p- 192.168.1.20``
+
+**Scan Timings**
+
+**Very fast**
+  
+* ``sudo nmap -sV -T5 192.168.1.10``
+  
+**Fast**
+  
+* ``sudo nmap -sV -T4 192.168.1.10``
+  
+**Normal**
+  
+* ``sudo nmap -sV -T3 192.168.1.10``
+  
+**Slow***
+* ``sudo nmap -sV -T2 192.168.1.10``
+* ``sudo nmap -sV -T0 192.168.1.10``
+
 **Fork bomb**
 
 * ``:(){ :|:& };:``
