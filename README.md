@@ -976,6 +976,7 @@
 * ``sudo nmap -sn 192.168.1.0/24``
 * ``sudo nmap -sV -p- 192.168.1.20``
 * ``sudo nmap -oN scan.txt 127.0.0.1``
+* ``sudo nmap debian.org -O -A``
 
 **Scan Timings**
 
