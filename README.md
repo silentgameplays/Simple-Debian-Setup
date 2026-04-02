@@ -976,6 +976,8 @@
 * ``sudo nmap -sV -p- 192.168.1.20``
 * ``sudo nmap -oN scan.txt 127.0.0.1``
 * ``sudo nmap debian.org -O -A``
+* **sample**
+* ``sudo nmap -T4 -p 200-1024 google.com -O --max-os-tries 3 -A -oN scan.txt``
 
 **Scan Timings**
 
