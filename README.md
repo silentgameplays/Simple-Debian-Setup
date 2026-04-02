@@ -967,7 +967,6 @@
 * ``sudo nmap -O --max-os-tries 3 127.0.0.1``
 * ``sudo nmap scanme.nmap.org``
 * ``sudo nmap -sV scanme.nmap.org``
-* ``sudo nmap -sV scanme.nmap.org``
 * ``sudo nmap -A scanme.nmap.org``
 * ``sudo nmap 192.164.1.*``
 * ``sudo nmap -p 76–973 192.164.0.1``
