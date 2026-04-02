@@ -952,6 +952,8 @@
 * ``nslookup debian.org``
 * ``whois 127.0.0.1``
 * ``ping 127.0.0.1``
+* ``ip addr show | grep inet``
+
 
 **(fun stuff)Ping of death**
 
@@ -960,8 +962,8 @@
 **Use nmap to scan ports and IPs**
 
 * ``sudo apt install nmap`` 
-* ``sudo nmap -A``
-* ``sudo nmap -O``
+* ``sudo nmap -A 127.0.0.1``
+* ``sudo nmap -O 127.0.0.1``
 * ``sudo nmap scanme.nmap.org``
 * ``sudo nmap -sV scanme.nmap.org``
 * ``sudo nmap -sV scanme.nmap.org``
