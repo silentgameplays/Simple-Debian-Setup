@@ -953,7 +953,77 @@
 * ``whois 127.0.0.1``
 * ``ping 127.0.0.1``
 * ``ip addr show | grep inet``
+* ``ifconfig -a``
+**Disable and enable a network interface**
 
+* ``ifconfig ens3 down``
+* ``ifconfig ens3 up``
+
+**Flush DNS Cache systemD**
+* ``systemd-resolve --statistics``
+* ``sudo systemd-resolve --flush-caches``
+**Flush DNS Cache with BIND**
+* ``service named status``
+* ``systemctl is-active named``
+* ``sudo rndc flush``
+**Check with these commands**
+* ``sudo rndc dumpdb -cache``
+* ``sudo cat /var/named/data/cache_dump.db``
+**If the file contains this then the DNS is flushed**
+```
+;
+; Start view _default
+;
+;
+; Cache dump of view '_default' (cache _default)
+;
+$DATE 20190711141232
+;
+; Address database dump
+;
+; [edns success/4096 timeout/1432 timeout/1232 timeout/512 timeout]
+; [plain success/timeout]
+;
+;
+; Unassociated entries
+;
+;
+; Bad cache
+;
+```
+**Flush CAche with nscd**
+* ``systemctl is-active nscd``
+* ``systemctl is-active nscd``
+* ``sudo nscd --invalidate=hosts``
+* ``sudo nscd -g``
+**This is the expected output**
+```
+nscd configuration:
+
+              0  server debug level
+         1m  5s  server runtime
+              5  current number of threads
+             32  maximum number of threads
+              0  number of times clients had to wait
+             no  paranoia mode enabled
+           3600  restart internal
+              5  reload count
+.......................................
+hosts cache:
+
+            yes  cache is enabled
+            yes  cache is persistent
+            yes  cache is shared
+            211  suggested size
+         216064  total data pool size
+              0  used data pool size
+           3600  seconds time to live for positive entries
+             20  seconds time to live for negative entries
+              0  cache hits on positive entries
+              0  cache hits on negative entries
+              5  cache misses on positive entries
+......................................
+```
 
 **(fun stuff)Ping of death**
 
