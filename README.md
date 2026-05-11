@@ -906,6 +906,9 @@
 
 * ``ausearch -m execve --success yes``
 
+**Show package and all related packages installed**
+* ``sudo pacman -Q | grep pipewire``
+* ``sudo pacman -Qe``
 **Check and clean apt cache**
 * ``ls /var/cache/apt/archives``
 * ``sudo du -sh /var/cache/apt/archives``
