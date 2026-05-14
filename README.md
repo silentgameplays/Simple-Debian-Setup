@@ -560,6 +560,15 @@
 * ``systemctl --user restart wireplumber.service``
 * ``systemctl --user restart pipewire.service``
 
+**Additional Troubleshooting for Gigabyte motherboards**
+* ``sudo dmesg | grep -E 'snd|sof'``
+* ``aplay -lL #alsa-utils``
+* ``aplay -l``
+
+**If something is missing or showing Razer Audio instead of ALC897 then install the sof-firmware package and reboot**
+
+* ``sudo apt install firmware-sof``
+
 **(Desktop Only) Disable hibernate, sleep and other default settings for gaming purposes works best on KDE Plasma/XFCE, do not use on laptops!**
 
 * ``sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target``
