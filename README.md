@@ -508,9 +508,8 @@
 * ``systemctl --user restart wireplumber pipewire pipewire-pulse``
 
 **Optional all dependencies for pipewire choose between jack and pipewire-jack**
-* ``sudo apt install gstreamer1.0-pipewire, libpipewire-0.3-0t64, libpipewire-0.3-common, libpipewire-0.3-dev, libpipewire-0.3-modules, libpipewire-0.3-modules-x11, libspa-0.2-bluetooth, libspa-0.2-dev, libspa-0.2-jack, libspa-0.2-libcamera, libspa-0.2-modules, pipewire, pipewire-alsa, pipewire-audio, pipewire-audio-client-libraries, pipewire-bin, pipewire-doc, pipewire-jack, pipewire-libcamera, pipewire-pulse, pipewire-tests, pipewire-v4l2``
-
-* ``sudo apt install gstreamer1.0-pipewire, libpipewire-0.3-0t64, libpipewire-0.3-common, libpipewire-0.3-dev, libpipewire-0.3-modules, libpipewire-0.3-modules-x11, libspa-0.2-bluetooth, libspa-0.2-dev, libspa-0.2-jack, libspa-0.2-libcamera, libspa-0.2-modules, pipewire, pipewire-alsa, pipewire-audio, pipewire-audio-client-libraries, pipewire-bin, pipewire-doc, jack2d, pipewire-libcamera, pipewire-pulse, pipewire-tests, pipewire-v4l2``
+* ``sudo apt install libasound2t64 libasound2-plugins alsa-utils alsa-tools alsa-firmware-loaders pipewire-audio pipewire pipewire-audio-client-libraries pipewire-pulse pipewire-alsa libcanberra-pulse pipewire wireplumber jack2d``
+* ``systemctl --user restart wireplumber pipewire pipewire-pulse``
 
 **Select Pro Audio,especially for USB headphones instead of Analog Stereo Duplex:**
 
