@@ -504,14 +504,14 @@
 
 **Install additional alsa and pipewire dependencies and restart pipewire service**
 
-* ``sudo apt install libasound2t64 libasound2-plugins alsa-utils alsa-tools alsa-firmware-loaders pipewire-audio pipewire pipewire-audio-client-libraries pipewire-pulse pipewire-alsa libcanberra-pulse pipewire wireplumber pipewire-jack``
+* ``sudo apt install libasound2t64 libasound2-plugins alsa-utils alsa-tools alsa-firmware-loaders pipewire-audio pipewire pipewire-pulse pipewire-alsa libcanberra-pulse pipewire wireplumber pipewire-jack``
 
 * ``systemctl --user restart wireplumber pipewire pipewire-pulse``
 
 
 **Optional all dependencies for pipewire choose between jack and pipewire-jack**
 
-* ``sudo apt install libasound2t64 libasound2-plugins alsa-utils alsa-tools alsa-firmware-loaders pipewire-audio pipewire pipewire-audio-client-libraries pipewire-pulse pipewire-alsa libcanberra-pulse pipewire wireplumber jackd2``
+* ``sudo apt install libasound2t64 libasound2-plugins alsa-utils alsa-tools alsa-firmware-loaders pipewire-audio pipewire pipewire-pulse pipewire-alsa libcanberra-pulse pipewire wireplumber jackd2``
 
 * ``systemctl --user restart wireplumber pipewire pipewire-pulse``
 
