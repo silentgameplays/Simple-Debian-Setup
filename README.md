@@ -574,6 +574,10 @@
 
 * ``sudo apt install firmware-sof``
 
+**Or on stable**
+
+* ``sudo apt install firmware-sof-signed``
+
 **(Desktop Only) Disable hibernate, sleep and other default settings for gaming purposes works best on KDE Plasma/XFCE, do not use on laptops!**
 
 * ``sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target``
