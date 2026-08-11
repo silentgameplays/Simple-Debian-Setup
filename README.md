@@ -508,7 +508,7 @@
 * ``systemctl --user restart wireplumber pipewire pipewire-pulse``
 
 **Optional all dependencies for pipewire choose between jack and pipewire-jack**
-* ``sudo apt install libasound2t64 libasound2-plugins alsa-utils alsa-tools alsa-firmware-loaders pipewire-audio pipewire pipewire-audio-client-libraries pipewire-pulse pipewire-alsa libcanberra-pulse pipewire wireplumber jack2d``
+* ``sudo apt install libasound2t64 libasound2-plugins alsa-utils alsa-tools alsa-firmware-loaders pipewire-audio pipewire pipewire-audio-client-libraries pipewire-pulse pipewire-alsa libcanberra-pulse pipewire wireplumber jackd2``
 * ``systemctl --user restart wireplumber pipewire pipewire-pulse``
 
 **Select Pro Audio,especially for USB headphones instead of Analog Stereo Duplex:**
