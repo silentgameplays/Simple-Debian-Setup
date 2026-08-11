@@ -835,6 +835,18 @@
 
 * ``pactl info|grep "Server Name"``
 
+**Checking RAM memory and GPU VRAM memory for issues**
+
+* ``sudo apt install memtester``
+* ``sudo memtester 512M``
+* ``sudo memtester 8G``
+* ``sudo memtester 16G``
+
+* ``sudo apt install memtest_vulkan``
+* ``memtest_vulkan``
+
+**For memtest_vulkan 5 minutes is enough to spot critical issues**
+
 **(Optional) Adding a secondary SSD/HDD in fstab manually:**
 
 **If it is an existing SSD/HDD that you already formatted with ext4 or btrfs and automounted in filemanager like Dolphin or Nemo,then you have to check in properties for example "/media/user/Backup" that is your mount point.**
