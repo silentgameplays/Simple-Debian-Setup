@@ -861,6 +861,8 @@
 * ``sudo apt install sysstat``
 * ``iostat -d``
 * ``iostat -c``
+* ``iostat -d -s``
+* ``iostat -c -s``  
   
 **To get real time I/O reports from all disks**  
 
@@ -869,7 +871,7 @@
 **To get real time I/O from 2 disks in 6 second intervals**
 
 * ``iostat -x sda sdb 2 6``
-* ``iostat -x nvme0n1 nvme1n1 2 6`` \
+* ``iostat -x nvme0n1 nvme1n1 2 6``
 
 **Use TestDisk to recover deleted files**
 
