@@ -847,6 +847,38 @@
 
 **For memtest_vulkan 5 minutes is enough to spot critical issues**
 
+**Checking SSD's and HDD's for issues, if not installed, install smartmontools package**
+
+* ``sudo apt install smartmontools``
+
+**To get a detailed SMART report**
+
+* ``sudo smartctl -a /dev/sda``
+* ``sudo smartctl -a /dev/nvme0n1``
+
+**To get accurate I/O reports with sysstat**
+
+* ``sudo apt install sysstat``
+* ``iostat -d``
+* ``iostat -c``
+  
+**To get real time I/O reports from all disks**  
+
+* ``iostat -x 1``
+
+**To get real time I/O from 2 disks in 6 second intervals**
+
+* ``iostat -x sda sdb 2 6``
+* ``iostat -x nvme0n1 nvme1n1 2 6`` \
+
+**Use TestDisk to recover deleted files**
+
+* ``sudo apt install testdisk``
+
+* ``sudo testdisk /dev/sda1``
+
+* ``sudo testdisk /dev/nvme0n1p1``
+
 **(Optional) Adding a secondary SSD/HDD in fstab manually:**
 
 **If it is an existing SSD/HDD that you already formatted with ext4 or btrfs and automounted in filemanager like Dolphin or Nemo,then you have to check in properties for example "/media/user/Backup" that is your mount point.**
