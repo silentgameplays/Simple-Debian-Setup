@@ -429,7 +429,7 @@
 
 # 8. Gaming section install Steam,Lutris,Wine with the following commands, if you did all the steps before correctly then Steam should install without issues:
 
-* ``sudo apt install steam lutris wine wine32 wine64 libwine libwine:i386 fonts-wine scummvm dosbox ``
+* ``sudo apt install steam lutris wine scummvm dosbox ``
 
 **For Steam it's optional to add main user to video and audio groups**
 
@@ -437,19 +437,19 @@
 
 **(Optional) Additional dependencies for Wine/Gaming:**
 
-* ``sudo apt install sudo apt install gvfs:i386 wine32-preloader:i386 wine64-preloader wine-binfmt gstreamer1.0-plugins-bad gstreamer1.0-tools opus-tools``
+* ``sudo apt install mingw-w64 flvmeta smpeg-plaympeg lame mjpegtools x265 x264 mpv mpg123 libxvidcore4``
 
-* ``sudo apt install fizmo-sdl2 libsdl2-2.0-0 libsdl2-dev libsdl2-gfx-1.0-0 libsdl2-gfx-dev libsdl2-image-2.0-0 libsdl2-mixer-2.0-0 libsdl2-net-2.0-0``
+**How to solve dependency issues like apt --fix-broken packages errors on Debian and Debian-based distros**
 
-* ``sudo apt install mingw-w64 flvmeta smpeg-plaympeg lame mjpegtools x265 x264 mpv mpg123 libxvidcore4 fluidsynth``
+* ``sudo dpkg --force-all --configure -a``
+* ``sudo dpkg --purge --force-depends <broken package name>``
+* ``sudo apt --fix-broken install``
 
-**(Optional) Mono package for NET framework support on Linux**
-
-* ``sudo apt install mono-complete``
 
 **(Optional) For every older like Devil May Cry collection or newer game that does not display cutscenes properly,regardless of Proton/Wine version, go into the games folder with videos, open the terminal inside the folders with videos and use this fix, ffmpeg installed on the system is a reuirement**
 
 * ``sudo pacman -S ffmpeg``
+
 **This is for mpg/mp4**
 
 * ``for FMV in *.wmv; do ffmpeg -i $FMV ${FMV:0:-4}.mp4; rm $FMV; mv -- ${FMV:0:-4}.mp4 $FMV; done``
