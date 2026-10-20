@@ -474,14 +474,16 @@
 3. Go into Steam Settings select toggle Enable GPU accelerated rendering in web views, you need to Disable this setting.
 4. Steam should start automatically another option is to use the terminal to launch the Steam client every time.
 
-**(Optional) Install Glourious Eggroll Proton GE the easy way:**
+**(Optional) Install Glourious Eggroll Proton GE, CachyOS Proton,Wineland Proton the easy way without ProtonPlus:**
 
- * Download the latest release here: https://github.com/GloriousEggroll/proton-ge-custom/releases
- * Extract,enable hidden files and folders 
+ * Download the latest Glorious Eggroll release here: https://github.com/GloriousEggroll/proton-ge-custom/releases
+ * Wineland Proton: https://github.com/nanomatters/proton-salkim/releases
+ * CachyOS Proton: https://github.com/CachyOS/proton-cachyos/releases
+ * Extract,enable hidden files and folders for your Desktop Environment
  * Create a folder in your /home/user/steam/root/compatibilitytools.d if it does not exist.
  * Copy/paste the extracted GE folder into /home/user/config/.steam/root/compatibilitytools.d
- * Restart Steam,enjoy the custom GE build
- 
+ * Restart Steam,enjoy the custom Protons
+    
 **(Optional) Opensource games:**
 
 * ``sudo apt install supertux supertuxkart wesnoth 0ad kapman freedroidrpg``
