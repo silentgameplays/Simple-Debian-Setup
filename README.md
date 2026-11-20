@@ -111,38 +111,48 @@
 
 * root
 
-# 6. Updating the /etc/apt/sources list with additional non-free repositiories, this changes depending on the Debian version:**
+# 6. (This is the old way,still present in trixie) Updating the /etc/apt/sources.list with additional non-free repositories, this changes depending on the Debian version:**
 
 * ``sudo nano /etc/apt/sources.list``
 
-* deb http://deb.debian.org/debian trixie main non-free-firmware
-* deb-src http://deb.debian.org/debian trixie main non-free-firmware
+* deb http://deb.debian.org/debian trixie main contrib non-free-firmware
+* deb-src http://deb.debian.org/debian trixie main contrib non-free-firmware
 
-* deb http://deb.debian.org/debian-security/ trixie-security main non-free-firmware
-* deb-src http://deb.debian.org/debian-security/ trixie-security main non-free-firmware
+* deb http://deb.debian.org/debian-security/ trixie-security main contrib non-free-firmware
+* deb-src http://deb.debian.org/debian-security/ trixie-security main contrib non-free-firmware
 
-* deb http://deb.debian.org/debian trixie-updates main non-free-firmware
-* deb-src http://deb.debian.org/debian trixie-updates main non-free-firmware
+* deb http://deb.debian.org/debian trixie-updates main contrib non-free-firmware
+* deb-src http://deb.debian.org/debian trixie-updates main contrib non-free-firmware
 
-* deb http://deb.debian.org/debian trixie contrib non-free
-* deb-src http://deb.debian.org/debian trixie contrib non-free 
+**(Optional) Install newer packages via backports on stable:**
+
+**Add distroname-backports to your** ``/etc/apt/sources.list`` **,for example:**
+
+* ``sudo nano /etc/apt/sources.list``
+
+**Add this line for Trixie:**
+
+* deb http://deb.debian.org/debian trixie-backports main contrib non-free
+* deb-src http://deb.debian.org/debian trixie-backports main contrib non-free
 
 * ``sudo apt update && sudo apt upgrade``
 
-**For testing:**
+**(100% Optional) Might cause issues upgrading the kernel via backports:**
 
-* deb      http://ftp.uk.debian.org/debian/ testing main non-free contrib
-* deb-src  http://ftp.uk.debian.org/debian/ testing main non-free contrib
+**Run:**
 
-**security**
+* ``sudo apt update && sudo apt upgrade``
+* ``sudo apt -t install trixie-backports linux-base-amd64 linux-image-amd64 linux-libc-dev``
+* ``sudo apt update && sudo apt upgrade``
+* ``sudo reboot``
 
-* deb      http://security.debian.org testing-security main non-free contrib
-* deb-src  http://security.debian.org testing-security main non-free contrib
+**Wait for the installation to finish and reboot, type the following commands after reboot:**
 
-**updates**
+* ``sudo apt update && sudo apt upgrade``
 
-* deb      http://ftp.uk.debian.org/debian/ testing-updates main non-free contrib
-* deb-src  http://ftp.uk.debian.org/debian/ testing-updates main non-free contrib
+**Newer mesa drivers through backports:**  
+
+* ``sudo apt install -t trixie-backports firmware-amd-graphics libgl1-mesa-dri libgl1-mesa-dri:i386 libglx-mesa0 libglx-mesa0:i386 mesa-vulkan-drivers mesa-vulkan-drivers:i386 xserver-xorg-video-all``
 
 # To modernize sources on Debian Trixie use this command, this raises a small issue with Trixie-backports that is saved as a separate file in the same location as the new sources list:
 
@@ -217,7 +227,6 @@
 * ``Enabled: yes``
 * ``Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg``
 
-
 # SID
 
 * ``Types: deb``
@@ -225,6 +234,10 @@
 * ``Suites: sid``
 * ``Components: main contrib non-free non-free-firmware``
 * ``Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg``
+
+**Hold certain packages from updating on Testing/Sid when issues occur, for example Linux kernel**
+
+* ``sudo apt-mark hold linux-base-amd64 linux-image-amd64 linux-libc-dev``
 
 # 7. Adding Multiarch is very important! 
 **(You will need it for AMD and NVIDIA drivers,Vulkan,Steam,Lutris,Heroic and other gaming related things)**
@@ -249,7 +262,7 @@
 
 * ``sudo apt update && sudo apt upgrade``
 
-# 8. Installing NVIDIA and AMD Drivers update the sources list if necesary for non-free:
+# 8. Installing NVIDIA and AMD Drivers update the sources list if necessary for non-free dirvers:
 
 **First do this just in case:**
 
@@ -273,7 +286,7 @@
 
 **For NVIDIA Choose one of the two options**
 
-**(Option 1)Install the proprietary NVIDIA drivers with dependencies like vulkan,etc:**
+**(Option 1)Install the proprietary NVIDIA drivers with dependencies like vulkan,etc this is for GTX users:**
 
 * ``sudo apt install nvidia-kernel-dkms nvidia-driver nvidia-settings libvulkan-dev nvidia-vulkan-icd vulkan-tools  vulkan-validationlayers``
 * ``sudo apt update && sudo apt upgrade``
@@ -309,53 +322,13 @@
   
 * ``sudo cat /sys/module/nvidia_drm/parameters/modeset``
 
-**(Optional) Install newer NVIDIA Drivers via backports on stable:**
-
-**Add distroname-backports to your** ``/etc/apt/sources.list`` **,for example:**
-
-* ``sudo nano /etc/apt/sources.list``
-
-**Add this line:**
-
-* deb http://deb.debian.org/debian distro_name-backports main contrib non-free
-* deb-src http://deb.debian.org/debian distro_name-backports main contrib non-free
-
-* ``sudo apt update && sudo apt upgrade``
-
-**Install the package nvidia-driver.**
+**Install the package nvidia-driver through backports.**
 
 * ``sudo apt update && sudo apt upgrade``
 * ``sudo apt install -t distro_name-backports nvidia-driver nvidia-settings libvulkan-dev nvidia-vulkan-icd vulkan-tools  vulkan-validationlayers vulkan-validationlayers-dev``
-
 * ``sudo apt update && sudo apt upgrade``
 
-**(100% Optional) Might cause issues upgrading the kernel via backports:**
-
-* ``sudo nano /etc/apt/sources.list``
-
-**Add this line:**
-
-* deb http://deb.debian.org/debian trixie-backports main
-
-**Run:**
-
-* ``sudo apt update && sudo apt upgrade``
-* ``sudo apt -t trixie-backports install linux-image-amd64``
-* ``sudo apt update && sudo apt upgrade``
-* ``sudo reboot``
-
-**Wait for the installation to finish and reboot, type the following commands after reboot:**
-
-* ``sudo apt update``
-
-* ``sudo apt upgrade``
-  
-**Or:**
-
-* ``sudo apt update && sudo apt upgrade``
-
-
-**NB! There might be missing firmware errors in the terminal during installtion, usually its Realtek but just to be sure run the following command:**
+**NB! There might be missing firmware errors in the terminal during installation, usually its Realtek but just to be sure run the following command:**
 
 * ``sudo dmesg`` 
 
@@ -397,6 +370,63 @@
 
 * ``cat /proc/sys/vm/max_map_count``
 
+**(Desktop Only) Disable hibernate, sleep and other default settings for gaming purposes works best on KDE Plasma/XFCE, do not use this on laptops!**
+
+* ``sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target``
+* ``sudo reboot``
+
+**Another "PROPER" way to disable suspend and hybernate**
+
+* ``sudo nano /etc/systemd/sleep.conf``
+
+**Uncomment and set to no**
+* ``[Sleep]``
+* ``#AllowSuspend=yes`` 
+* ``#AllowHibernation=yes``
+* ``#AllowSuspendThenHibernate=yes``
+* ``#AllowHybridSleep=yes``
+  
+**To disable suspend it should look like this**
+
+* ``[Sleep]``
+* ``AllowSuspend=no``
+* ``AllowHibernation=no``
+* ``AllowSuspendThenHibernate=no``
+* ``AllowHybridSleep=no`` 
+
+**Check if worked**
+
+* ``systemctl suspend``
+
+**This is the error message you should get**
+
+* ``Call to Suspend failed: Sleep verb 'suspend' is disabled by config``
+
+**To re-enable suspend just revert the changes**
+
+**(Additional steps) Disable suspend on GNOME**
+
+**Check types if active will reply `suspend`**
+
+* ``gsettings get org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type``
+
+**Check states should reply `true`**
+
+* ``gsettings writable org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type``
+
+**Check range of available states**
+
+* ``gsettings range org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type``
+  
+**Enter**
+
+* ``gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'``
+
+
+**Check again should reply `nothing`**
+
+* ``gsettings get org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type``
+
 **Enable VRR (freesync/gsync) Support for GNOME**
 
 * ``gsettings set org.gnome.mutter experimental-features "['variable-refresh-rate']"``
@@ -422,7 +452,6 @@
 
 * ``gsettings set org.gnome.mutter check-alive-timeout 0``
   
-
 **Disable notification sounds on GNOME, helps when playing fullscreen games**
 
 * ``gsettings set org.gnome.desktop.sound event-sounds false``
@@ -500,16 +529,13 @@
 
 * ``sudo apt install ffmpeg``
 
-**Fixing audio issues:**
-
-**Most gaming audio related issues in Proton/Pipewire happen because Secure Boot is enabled, installing Debian with Secure Boot disabled in BIOS/UEFI will help in these cases, Steam Deck has no Secure Boot.**
+**(Optional tinkering, use as last resort) Fixing audio issues:**
 
 **Install additional alsa and pipewire dependencies and restart pipewire service**
 
 * ``sudo apt install libasound2t64 libasound2-plugins alsa-utils alsa-tools alsa-firmware-loaders pipewire-audio pipewire pipewire-pulse pipewire-alsa libcanberra-pulse pipewire wireplumber pipewire-jack``
 
 * ``systemctl --user restart wireplumber pipewire pipewire-pulse``
-
 
 **Optional all dependencies for pipewire choose between jack and pipewire-jack**
 
@@ -529,8 +555,7 @@
 
 * #default.clock.allowed-rates = [ 44100 48000 96000 ]
 
- 
-**(Optional)To fix audio crackling remove speech-dispatcher, if it makes things worse just reinstall it back**
+ **(Optional)To fix audio crackling remove speech-dispatcher, if it makes things worse just reinstall it back**
 
 * ``sudo apt purge speech-dispatcher``
 * ``sudo apt autoremove``
@@ -540,11 +565,9 @@
 * ``sudo apt install easyeffects``
 * ``sudo apt install lsp-plugins-lv2 calf-plugins x42-plugins zam-plugins``
 
-
 **Launch EasyEffects and apply presets that you can download from the repo provided here LoudnessEqualizer.json:**
 
 * https://github.com/Digitalone1/EasyEffects-Presets
-
 
 **Proper OBS Studio installation to avoid audio cut offs for Trixie**
 
@@ -583,64 +606,6 @@
 **Or on stable**
 
 * ``sudo apt install firmware-sof-signed``
-
-**(Desktop Only) Disable hibernate, sleep and other default settings for gaming purposes works best on KDE Plasma/XFCE, do not use on laptops!**
-
-* ``sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target``
-* ``sudo reboot``
-
-**Another "PROPER" way to disable suspend and hybernate**
-
-* ``sudo nano /etc/systemd/sleep.conf``
-
-**Uncomment and set to no**
-* ``[Sleep]``
-* ``#AllowSuspend=yes`` 
-* ``#AllowHibernation=yes``
-* ``#AllowSuspendThenHibernate=yes``
-* ``#AllowHybridSleep=yes``
-  
-**To disable suspend it should look like this**
-
-* ``[Sleep]``
-* ``AllowSuspend=no``
-* ``AllowHibernation=no``
-* ``AllowSuspendThenHibernate=no``
-* ``AllowHybridSleep=no`` 
-
-**Check if worked**
-
-* ``systemctl suspend``
-
-**This is the error message you should get**
-
-* ``Call to Suspend failed: Sleep verb 'suspend' is disabled by config``
-
-**To re-enable suspend just revert the changes**
-
-**(Additional steps) Disable suspend on GNOME**
-
-**Check types if active will reply `suspend`**
-
-* ``gsettings get org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type``
-
-**Check states should reply `true`**
-
-* ``gsettings writable org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type``
-
-**Check range of available states**
-
-* ``gsettings range org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type``
-  
-**Enter**
-
-* ``gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'``
-
-
-**Check again should reply `nothing`**
-
-
-* ``gsettings get org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type``
 
 **(Optional) Disable and remove apparmor to fix possible issues related to gaming audio**
 
@@ -690,6 +655,7 @@
 * ``sudo apt update && sudo apt upgrade``
   
 **(Optional) Installing flatpak apps from the command line**
+
 * ``flatpak install protontricks vcmi fheroes2 openmw``
 
 **Let protontricks app have permissions for other drives on Steam**
@@ -703,6 +669,9 @@
 **Remove flatpak apps**
 * ``flatpak uninstall openmw``
 * ``flatpak remove openmw``
+**For XFCE it is best to install synaptic package manager with GUI**
+
+* ``sudo apt install synaptic``
 
 **(Optional) virt manager and QEMU Installation for Virtualization**
 
@@ -978,6 +947,29 @@
 
 **Show package and all related packages installed**
 * ``dpkg -l | grep pipewire``
+
+**Show all installed packages and their installation times**
+
+* ``grep " install" /var/log/dpkg.log``
+
+**Check if systemd is running smoothly**
+
+* ``systemctl status``
+* ``systemctl --user status``
+
+**If message degraded instead of running appears, check which processes are degraded**
+
+* systemctl --failed
+* systemctl --user --failed
+
+**Run to fix**
+
+* systemctl reset-failed
+* systemct --user reset-failed
+
+**Show what processes crashed**
+* coredumpctl
+
 **Check and clean apt cache**
 * ``ls /var/cache/apt/archives``
 * ``sudo du -sh /var/cache/apt/archives``
@@ -1005,14 +997,13 @@
 
 **(Bonus) Nice network tools to have:**
 
-* ``sudo apt install speedtest-cli bind9 bind9-doc bind9-dnsutils resolvconf mmdb-bin whois``
+* ``sudo apt install bind9 bind9-doc bind9-dnsutils resolvconf mmdb-bin whois``
 * ``sudo apt install wireshark john torbrowser-launcher``
 
 **(Optional) Searching for files related to an application like steam,wine,net or anything else:**
 
 * ``find . -type f -name *.inf -exec grep -n 'steam' /dev/null {} +``
 * ``find . -type f -name *.inf -exec grep -n 'steam' /dev/null {} +``
-
 
 **(Optional)Monitoring network**
 * ``ss -4``
@@ -1029,6 +1020,7 @@
 * ``ping 127.0.0.1``
 * ``ip addr show | grep inet``
 * ``ifconfig -a``
+
 **Disable and enable a network interface**
 
 * ``ifconfig ens3 down``
