@@ -25,6 +25,14 @@
 * ``sudo blkdiscard -f /dev/sda``
 * ``sudo blkdiscard -f /dev/nvme0n1``
 
+**Checking SSD/NVME SSD/HDD Health after install,needs smartmontools installed for minimum installs:**
+* ``sudo apt install smartmontools``
+**Detailed stats** 
+* ``sudo smartctl -a /dev/sda``
+* ``sudo smartctl -a /dev/nvme0n1``
+* ``sudo smartctl -H /dev/nvme0n1``
+* ``sudo smartctl -H /dev/sda``
+
 # 1. Use one of the provided images for Debian:
  https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/
 
